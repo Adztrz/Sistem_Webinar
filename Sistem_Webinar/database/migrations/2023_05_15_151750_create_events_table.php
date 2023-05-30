@@ -51,7 +51,6 @@ return new class extends Migration
            $table->foreign('user_id')->references('id_user')->on('users')->onDelete('cascade');
         });
 
-
         Schema::create('notifikasi', function (Blueprint $table) {
             $table->integer("id_notifikasi")->primary();
             $table->integer('event_id');
