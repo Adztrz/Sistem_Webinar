@@ -23,6 +23,7 @@ return new class extends Migration
             $table->date("certificateStartDate");
             $table->string("kategoriEvent", 32);
             $table->timestamps();
+            $table->string("bang bang");
 
             $table->foreign("user_id")->references("id_user")->on("users")->onDelete("cascade");
         });
