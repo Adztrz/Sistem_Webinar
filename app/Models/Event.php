@@ -10,7 +10,16 @@ class Event extends Model
     use HasFactory;
 
     protected $primaryKey = 'id_event';
-    protected $fillable = ['user_id', 'eventDate', 'eventLocation', 'isPaid', 'regisStartDate', 'regisEndDate', 'certificate', 'certificateStartDate', 'kategoriEvent'];
+    protected $fillable = 
+    ['user_id', 
+    'eventDate', 
+    'eventLocation', 
+    'isPaid', 
+    'regisStartDate', 
+    'regisEndDate', 
+    'certificate', 
+    'certificateStartDate', 
+    'kategoriEvent'];
 
     public function user()
     {

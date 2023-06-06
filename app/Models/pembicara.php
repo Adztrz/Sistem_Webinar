@@ -10,7 +10,8 @@ class pembicara extends Model
     use HasFactory;
 
     protected $primaryKey = 'id_pembicara';
-    protected $fillable = [
+    protected $fillable = 
+    [
         'event_id',
         'namaPembicara',
         'asalInstansi',
