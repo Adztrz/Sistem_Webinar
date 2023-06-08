@@ -10,12 +10,14 @@ class Pendaftaran extends Model
     use HasFactory;
     protected $primaryKey = 'id_pendaftaran';
     protected $fillable = 
-    ['user_id', 
-    'noIdentitas', 
-    'noTelp', 
-    'asalInstansi', 
-    'isPaid', 
-    'paymentProof'];
+    [
+        'user_id', 
+        'noIdentitas', 
+        'noTelp', 
+        'asalInstansi', 
+        'isPaid', 
+        'paymentProof'
+    ];
 
     public function user()
     {

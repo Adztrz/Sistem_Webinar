@@ -10,11 +10,13 @@ class Notifikasi extends Model
     use HasFactory;
     protected $primaryKey = 'id_notifikasi';
     protected $fillable = 
-    ['event_id', 
-    'namaEvent', 
-    'tanggal', 
-    'topikMateri', 
-    'sertifikat'];
+    [
+        'event_id', 
+        'namaEvent', 
+        'tanggal', 
+        'topikMateri', 
+        'sertifikat'
+    ];
 
     public function event()
     {
