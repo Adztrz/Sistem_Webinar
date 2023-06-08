@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pendaftaran', function (Blueprint $table) {
-            $table->integer("id_pendaftaran")->primary();
-            $table->integer("user_id");
+            //$table->integer("id_pendaftaran")->primary();
+            $table->id();
+            //$table->integer("user_id");
             $table->integer('noIdentitas');
             $table->string('noTelp', 16);
             $table->string('asalInstansi', 64);
@@ -21,7 +22,7 @@ return new class extends Migration
             $table->string('paymentProof', 64);
             $table->timestamps();
 
-           $table->foreign('user_id')->references('id_user')->on('users')->onDelete('cascade');
+       //    $table->foreign('user_id')->references('id_user')->on('users')->onDelete('cascade');
         });
 
     }
