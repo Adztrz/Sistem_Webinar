@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {   
-        Schema::create('notifikasi', function (Blueprint $table) {
+        Schema::create('notification', function (Blueprint $table) {
            // $table->integer("id_notifikasi")->primary();
             $table->id();
 
