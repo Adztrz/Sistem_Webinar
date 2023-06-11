@@ -9,7 +9,11 @@ class Event extends Model
 {
     use HasFactory;
 
+<<<<<<< HEAD
     protected $primaryKey = 'id';
+=======
+    protected $primaryKey = 'id_event';
+>>>>>>> parent of 1761990 (Recreated Models)
     protected $fillable = 
     [
         'user_id', 
@@ -21,8 +25,27 @@ class Event extends Model
         'certificate', 
         'certificateStartDate', 
         'kategoriEvent'
+<<<<<<< HEAD
 
     ];
 
 
+=======
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id_user');
+    }
+
+    public function pembicaras()
+    {
+        return $this->hasMany(Pembicara::class, 'event_id', 'id_event');
+    }
+
+    public function notifikasi()
+    {
+        return $this->hasOne(Notifikasi::class, 'event_id', 'id_event');
+    }
+>>>>>>> parent of 1761990 (Recreated Models)
 }
