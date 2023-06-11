@@ -9,3 +9,4 @@ class Speaker extends Model
 {
     use HasFactory;
 }
+    
