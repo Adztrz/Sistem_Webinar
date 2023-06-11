@@ -9,11 +9,7 @@ class Event extends Model
 {
     use HasFactory;
 
-<<<<<<< HEAD
     protected $primaryKey = 'id';
-=======
-    protected $primaryKey = 'id_event';
->>>>>>> parent of 1761990 (Recreated Models)
     protected $fillable = 
     [
         'user_id', 
@@ -25,12 +21,6 @@ class Event extends Model
         'certificate', 
         'certificateStartDate', 
         'kategoriEvent'
-<<<<<<< HEAD
-
-    ];
-
-
-=======
     ];
 
     public function user()
@@ -47,5 +37,4 @@ class Event extends Model
     {
         return $this->hasOne(Notifikasi::class, 'event_id', 'id_event');
     }
->>>>>>> parent of 1761990 (Recreated Models)
 }
