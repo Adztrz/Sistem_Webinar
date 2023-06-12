@@ -12,16 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('speaker', function (Blueprint $table) {
-            //$table->integer("id_pembicara")->primary();
-            $table->id();
-            
-            //$table->integer("event_id");
+            $table->id();  
             $table->string("namaPembicara", 256);
             $table->string("asalInstansi", 64);
             $table->string("topikMateri", 256);
             $table->timestamps();
 
-        //   $table->foreign('event_id')->references('id_event')->on('events')->onDelete('cascade');
         });
     }
 
