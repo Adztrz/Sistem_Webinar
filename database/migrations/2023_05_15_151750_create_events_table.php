@@ -12,7 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('events', function (Blueprint $table) {
+            //$table->integer("id_event")->primary();
             $table->id();
+            
+            //$table->integer("user_id");
             $table->date("eventDate");
             $table->date("eventLocation");
             $table->string("isPaid", 16);
@@ -22,6 +25,8 @@ return new class extends Migration
             $table->date("certificateStartDate");
             $table->string("kategoriEvent", 32);
             $table->timestamps();
+
+            //$table->foreign("user_id")->references("id_user")->on("users")->onDelete("cascade");
         });
 
         
