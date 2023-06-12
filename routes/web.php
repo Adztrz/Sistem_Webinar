@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/event', function (){
-    return ('event');
+    return view('event');
 });
 
 Route::get('/speaker', function () {
