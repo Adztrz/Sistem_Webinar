@@ -735,7 +735,8 @@
 
       </div>
 
-    </section><!-- End Sponsors Section -->
+    </section>
+    <!-- End Sponsors Section -->
 
     <!-- =======  F.A.Q Section ======= -->
     <section id="faq">
