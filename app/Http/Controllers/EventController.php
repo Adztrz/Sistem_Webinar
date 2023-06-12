@@ -9,15 +9,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        return view ('event', [
-            "eventDate" => $eventDate,
-            "eventLocation" => $eventLocation,
-            "isPaid" => $isPaid,
-            "regisStartDate" => $regisStartDate,
-            "regisEndDate" => $regisEndDate,
-            "certificate" => $certificate,
-            "certificateStartDate" => $certificateStartDate,
-            "kategoriEvent" => $kategoriEvent            
-        ]);
+        $events = Event::all();
+        return view ('event', compact('events'));
     }
 }
