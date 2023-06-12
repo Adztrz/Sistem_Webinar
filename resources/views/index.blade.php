@@ -130,30 +130,29 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+              <img src="assets/img/speakers/najwa.jpg" alt="Speaker 1" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Brenden Legros</a></h3>
-                <p>Quas alias incidunt</p>
+                <h3><a href="speaker-details.html">Najwa Shihab</a></h3>
+                <p>Founder Narasi</p>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://twitter.com/NajwaShihab"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/najwashihabofficial/?locale=id_ID"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/najwashihab/?hl=id"><i class="bi bi-instagram"></i></a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
+              <img src="assets/img/speakers/sandi.jpg" alt="Speaker 2" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Hubert Hirthe</a></h3>
-                <p>Consequuntur odio aut</p>
+                <h3><a href="speaker-details.html">Sandhika Galih</a></h3>
+                <p>Lecturer | Content Creator</p>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://twitter.com/sandhikagalih"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/sandhikagalih"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/sandhikagalih"><i class="bi bi-instagram"></i></a>
+                  <a href="https://id.linkedin.com/in/sandhikagalih"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -162,13 +161,12 @@
             <div class="speaker" data-aos="fade-up" data-aos-delay="300">
               <img src="assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Cole Emmerich</a></h3>
-                <p>Fugiat laborum et</p>
+                <h3><a href="speaker-details.html">Sabda Putra Subekti</a></h3>
+                <p>Ceo & Co-Founder Zenius</p>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://twitter.com/sabdaps"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.instagram.com/sabdaps"><i class="bi bi-instagram"></i></a>
+                  <a href="https://id.linkedin.com/in/sabda-ps-40bb1383"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -177,13 +175,13 @@
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
               <img src="assets/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
-                <p>Debitis iure vero</p>
+                <h3><a href="speaker-details.html">Maudy Ayunda</a></h3>
+                <p>Singer | Actress</p>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://twitter.com/maudyayunda"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/AyundaFazaMaudy"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/maudyayunda"><i class="bi bi-instagram"></i></a>
+                  <a href="https://id.linkedin.com/in/maudyayunda"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -192,13 +190,13 @@
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
               <img src="assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Alejandrin Littel</a></h3>
-                <p>Qui molestiae natus</p>
+                <h3><a href="speaker-details.html">Nadiem Makarim</a></h3>
+                <p>Minister of Education, Culture, Research, and Technology</p>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://twitter.com/nadiemmakarim"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/Nadiem.Makarim"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/nadiemmakarim"><i class="bi bi-instagram"></i></a>
+                  <a href="https://id.linkedin.com/in/nadiemmakarim"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -207,13 +205,13 @@
             <div class="speaker" data-aos="fade-up" data-aos-delay="300">
               <img src="assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Willow Trantow</a></h3>
-                <p>Non autem dicta</p>
+                <h3><a href="speaker-details.html">Dian Sastrowardoyo</a></h3>
+                <p>Entrepreneur | ACtress</p>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://twitter.com/therealDiSastr"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/DianSastrowardoyo"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/therealdisastr"><i class="bi bi-instagram"></i></a>
+                  <a href="https://id.linkedin.com/in/dian-paramita-sastrowardoyo-62527214"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
