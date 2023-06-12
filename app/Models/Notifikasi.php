@@ -18,8 +18,9 @@ class Notifikasi extends Model
         'sertifikat'
     ];
 
-    public function event()
-    {
-        return $this->belongsTo(Event::class, 'event_id', 'id_event');
-    }
+  // Relationships
+  public function event()
+  {
+      return $this->belongsTo(Event::class);
+  }
 }

@@ -23,18 +23,19 @@ class Event extends Model
         'kategoriEvent'
     ];
 
+    // Relationships
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id_user');
+        return $this->belongsTo(User::class);
     }
 
-    public function pembicaras()
+    public function speakers()
     {
-        return $this->hasMany(Pembicara::class, 'event_id', 'id_event');
+        return $this->hasMany(Speaker::class);
     }
 
-    public function notifikasi()
+    public function notifications()
     {
-        return $this->hasOne(Notifikasi::class, 'event_id', 'id_event');
+        return $this->hasMany(Notification::class);
     }
 }
