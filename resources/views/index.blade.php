@@ -110,7 +110,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="event" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/speakers/najwa.jpg" alt="Speaker 1" class="img-fluid">
+              <img src="assets/img/events/1.jpg" alt="event 1" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Mata Kita Social Venture</a></h3>
                 <p>Solo</p>
@@ -122,7 +122,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="event" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/speakers/sandi.jpg" alt="Speaker 2" class="img-fluid">
+              <img src="assets/img/events/2.jpg" alt="event 2" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Web Developer From Zero to Hero</a></h3>
                 <p>Semarang</p>
@@ -134,7 +134,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="event" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
+              <img src="assets/img/events/3.jpg" alt="event 3" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Zenius Solusi Pembelajaran Jarak Jauh</a></h3>
                 <p>Bandung</p>
@@ -146,7 +146,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="event" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
+              <img src="assets/img/events/4.jpg" alt="event 4" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Is Passion Overrated?</a></h3>
                 <p>Yogyakarta</p>
@@ -158,7 +158,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="event" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
+              <img src="assets/img/events/5.jpg" alt="event 5" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Satu Hati Menuju Indonesia Maju</a></h3>
                 <p>Live webinar</p>
@@ -170,7 +170,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="event" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
+              <img src="assets/img/events/6.jpg" alt="event 6" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Diskusi Film Indonesia</a></h3>
                 <p>Zoom</p>

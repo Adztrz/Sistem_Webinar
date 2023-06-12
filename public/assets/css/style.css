@@ -704,6 +704,11 @@ h6 {
   padding: 60px 0 30px 0;
 }
 
+.event img{
+  width: 1080px;
+  height: 400px;
+}
+
 #events .event {
   position: relative;
   overflow: hidden;
