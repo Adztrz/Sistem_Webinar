@@ -478,7 +478,7 @@
 
     </section><!-- End Schedule Section -->
 
-    <!-- ======= Venue Section ======= -->
+    <!-- ======= Venue Section ======= 
     <section id="venue">
 
       <div class="container-fluid" data-aos="fade-up">
@@ -575,9 +575,10 @@
         </div>
       </div>
 
-    </section><!-- End Venue Section -->
+    </section>
+     End Venue Section -->
             
-     <!-- <!-- ======= Hotels Section ======= -->
+    <!-- ======= Hotels Section ======= 
     <section id="hotels" class="section-with-bg">
 
       <div class="container" data-aos="fade-up">
@@ -642,9 +643,10 @@
       </div>
 
     </section>
-    <!-- End Hotels Section -->
+    End Hotels Section -->
     
-    <!-- ======= Gallery Section ======= -->
+    
+    <!-- ======= Gallery Section ======= 
     <section id="gallery">
 
       <div class="container" data-aos="fade-up">
@@ -668,7 +670,8 @@
         <div class="swiper-pagination"></div>
       </div>
 
-    </section><!-- End Gallery Section -->
+    </section>
+    End Gallery Section -->
 
     <!-- ======= Supporters Section ======= -->
     <section id="supporters" class="section-with-bg">
