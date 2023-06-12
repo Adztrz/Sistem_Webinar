@@ -55,9 +55,9 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
           <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
-          <li><a class="nav-link scrollto" href="#venue">Venue</a></li>
-          <li><a class="nav-link scrollto" href="#hotels">Hotels</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+          <!--<li><a class="nav-link scrollto" href="#venue">Venue</a></li>-->
+          <!--<li><a class="nav-link scrollto" href="#hotels">Hotels</a></li>-->
+          <!--<li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>-->
           <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
@@ -80,7 +80,7 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a class="buy-tickets scrollto" href="#buy-tickets">Buy Tickets</a>
+      <a class="buy-tickets scrollto" href="#buy-tickets">Login</a>
 
     </div>
   </header><!-- End Header -->
@@ -89,7 +89,7 @@
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1 class="mb-4 pb-0">Seminar<br><span>Multilevel</span> Marketing</h1>
-      <p class="mb-4 pb-0">11-12 Juni, Ngoresanw, Surakarta</p>
+      <p class="mb-4 pb-0">11-12 Juni, Tirtonadi Convention Hall, Surakarta</p>
       <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
       <a href="#about" class="about-btn scrollto">About The Event</a>
     </div>
@@ -576,8 +576,8 @@
       </div>
 
     </section><!-- End Venue Section -->
-
-    <!-- ======= Hotels Section ======= -->
+            
+     <!-- <!-- ======= Hotels Section ======= -->
     <section id="hotels" class="section-with-bg">
 
       <div class="container" data-aos="fade-up">
@@ -641,8 +641,9 @@
         </div>
       </div>
 
-    </section><!-- End Hotels Section -->
-
+    </section>
+    <!-- End Hotels Section -->
+    
     <!-- ======= Gallery Section ======= -->
     <section id="gallery">
 
