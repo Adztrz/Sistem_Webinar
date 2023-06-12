@@ -835,7 +835,7 @@
       </div>
     </section><!-- End Subscribe Section -->
 
-    <!-- ======= Buy Ticket Section ======= -->
+    <!-- ======= Buy Ticket Section ======= 
     <section id="buy-tickets" class="section-with-bg">
       <div class="container" data-aos="fade-up">
 
@@ -886,8 +886,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Pro Tier -->
+          </div> -->
+
+          <!-- Pro Tier 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="card">
               <div class="card-body">
@@ -912,9 +913,9 @@
           </div>
         </div>
 
-      </div>
+      </div>-->
 
-      <!-- Modal Order Form -->
+      <!-- Modal Order Form 
       <div id="buy-ticket-modal" class="modal fade">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -938,16 +939,17 @@
                     <option value="premium-access">Premium Access</option>
                   </select>
                 </div>
+                
                 <div class="text-center mt-3">
                   <button type="submit" class="btn">Buy Now</button>
                 </div>
               </form>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+            </div>-->
+           
+    </section> 
+    <!-- ======= End Ticket Section ======= -->
 
-    </section><!-- End Buy Ticket Section -->
+    
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="section-bg">
