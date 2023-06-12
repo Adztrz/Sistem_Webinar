@@ -52,7 +52,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Events</a></li>
+          <li><a class="nav-link scrollto" href="/event">Events</a></li>
           <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
           <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
           <!--<li><a class="nav-link scrollto" href="#venue">Venue</a></li>-->
