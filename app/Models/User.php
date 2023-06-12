@@ -42,11 +42,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function events(){
-        return $this->hasMany(events::class, 'user id', 'id_user');
-    }
-
-    public function pendaftaran(){
-        return $this->hasMany(pendaftaran::class, 'user_id', 'id_user');
-    }
+     // Relationships
+     public function events()
+     {
+         return $this->hasMany(Event::class);
+     }
+ 
+     public function registrations()
+     {
+         return $this->hasMany(Registration::class);
+     }
+ 
+     public function notifications()
+     {
+         return $this->hasMany(Notification::class);
+     }
 }

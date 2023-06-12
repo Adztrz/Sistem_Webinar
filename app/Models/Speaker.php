@@ -18,9 +18,10 @@ class pembicara extends Model
         'topikMateri'
     ];
 
-    public function event()
-    {
-        return $this->belongsTo(Events::class, 'event_id', 'id_event');
-    }
+     // Relationships
+     public function event()
+     {
+         return $this->belongsTo(Event::class);
+     }
 
 }
