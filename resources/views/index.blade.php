@@ -813,9 +813,11 @@
 
       </div>
 
-    </section><!-- End  F.A.Q Section -->
+    </section>
+    <!-- End  F.A.Q Section -->
 
     <!-- ======= Subscribe Section ======= -->
+    <!--
     <section id="subscribe">
       <div class="container" data-aos="zoom-in">
         <div class="section-header">
@@ -831,9 +833,9 @@
             </div>
           </div>
         </form>
-
       </div>
-    </section><!-- End Subscribe Section -->
+    </section> -->
+    <!-- End Subscribe Section -->
 
     <!-- ======= Buy Ticket Section ======= 
     <section id="buy-tickets" class="section-with-bg">
@@ -950,8 +952,9 @@
     <!-- ======= End Ticket Section ======= -->
 
     
-
+      
     <!-- ======= Contact Section ======= -->
+    <!--
     <section id="contact" class="section-bg">
 
       <div class="container" data-aos="fade-up">
@@ -1015,8 +1018,9 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
-
+    </section>-->
+    <!-- End Contact Section -->
+        
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
