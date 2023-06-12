@@ -96,8 +96,9 @@
   </section><!-- End Hero Section -->
 
   <main id="main">
-
+    
     <!-- ======= About Section ======= -->
+    <!--
     <section id="about">
       <div class="container" data-aos="fade-up">
         <div class="row">
@@ -117,7 +118,10 @@
           </div>
         </div>
       </div>
-    </section><!-- End About Section -->
+    </section>-->
+    
+    <!-- End About Section -->
+
 
     <!-- ======= Speakers Section ======= -->
     <section id="speakers">
