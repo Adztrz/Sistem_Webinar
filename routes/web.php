@@ -31,7 +31,7 @@ Route::get('/event', function (){
 });
 
 Route::get('/speaker', function () {
-    return ('speker');
+    return ('speaker');
 });
 
 Route::get('/schedule', function () {
