@@ -80,7 +80,7 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a class="buy-tickets scrollto" href="#buy-tickets">Login</a>
+      <a class="buy-tickets scrollto" href="buy-tickets">Login</a>
 
     </div>
   </header><!-- End Header -->
