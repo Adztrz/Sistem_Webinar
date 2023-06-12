@@ -21,3 +21,18 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/event', function (){
+    return ('event');
+});
+
+Route::get('/speaker', function () {
+    return ('speker');
+});
+
+Route::get('/schedule', function () {
+    return ('schedule');
+});
+
+Route::get('/notifikasi', function () {
+    return ('notifikasi');
+});
