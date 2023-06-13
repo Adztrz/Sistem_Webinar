@@ -45,7 +45,10 @@ class User extends Authenticatable
 
     protected $primaryKey='id';
 
-    
+    protected static function newFactory()
+    {
+        return \Database\Factories\UserFactory::new();
+    }
 
      // Relationships
      public function events()
