@@ -44,3 +44,7 @@ Route::get('/schedule', function () {
 Route::get('/notifikasi', function () {
     return ('notifikasi');
 });
+
+Route::get('/admin', function () {
+    return ('admin');
+});
