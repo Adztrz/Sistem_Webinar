@@ -21,5 +21,7 @@ class LoginController extends Controller
         ]);
     }
     
-    if (Auth::attempt)
+    if (Auth::attempt){
+
+    }
 }
