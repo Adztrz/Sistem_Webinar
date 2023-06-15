@@ -7,6 +7,6 @@
     <title>Webinar | Schedule</title>
 </head>
 <body>
-    <h1>Schedule Page</h1>
+    <h1>Event Page</h1>
 </body>
 </html>
