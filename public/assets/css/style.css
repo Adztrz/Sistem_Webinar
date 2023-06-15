@@ -698,6 +698,119 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Events Section
+--------------------------------------------------------------*/
+#events {
+  padding: 60px 0 30px 0;
+}
+
+.event img{
+  width: 1080px;
+  height: 400px;
+}
+
+#events .event {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#events .event .details {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#events .event .details h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#events .event .details p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+#events .event .details .social {
+  height: 40px;
+}
+
+#events .event .details .social i {
+  line-height: 0;
+  margin: 0 2px;
+}
+
+#events .event .details a {
+  color: #fff;
+}
+
+#events .event .details a:hover {
+  color: #f82249;
+}
+
+#events .event:hover .details {
+  bottom: 0;
+}
+
+#events-details {
+  padding: 60px 0;
+}
+
+#events-details .details h2 {
+  color: #112363;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#events-details .details .social {
+  margin-bottom: 15px;
+}
+
+#events-details .details .social h4 {
+  background: #e9edfb;
+  color: #fff;
+  line-height: 1;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#events-details .details .social h4:hover {
+  background: #f82249;
+  color: #fff;
+}
+
+#events-details .details .social h4{
+  font-size: 16px;
+  line-height: 0;
+}
+
+#events-details .details p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#events .event .details h4{
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
 #speakers {

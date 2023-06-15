@@ -52,7 +52,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="/event">Events</a></li>
+          <li><a class="nav-link scrollto" href="#events">Events</a></li>
           <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
           <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
           <!--<li><a class="nav-link scrollto" href="#venue">Venue</a></li>-->
@@ -98,30 +98,93 @@
 
   <main id="main">
     
-    <!-- ======= About Section ======= -->
-    <!--
-    <section id="about">
+    <!-- ======= Event Section ======= -->
+ 
+    <section id="events">
       <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Our Event</h2>
+          <p>Here are some of our events</p>
+        </div>
+
         <div class="row">
-          <div class="col-lg-6">
-            <h2>About The Event</h2>
-            <p>Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut
-              accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in
-              est ut optio sequi unde.</p>
+          <div class="col-lg-4 col-md-6">
+            <div class="event" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/img/events/1.jpg" alt="event 1" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Mata Kita Social Venture</a></h3>
+                <p>Solo</p>
+                <div class="social">
+                <h4>Rp100.000</h4>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-3">
-            <h3>Where</h3>
-            <p>Downtown Conference Center, New York</p>
+          <div class="col-lg-4 col-md-6">
+            <div class="event" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/img/events/2.jpg" alt="event 2" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Web Developer From Zero to Hero</a></h3>
+                <p>Semarang</p>
+                <div class="social">
+                <h4>Rp75.000</h4>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-3">
-            <h3>When</h3>
-            <p>Monday to Wednesday<br>10-12 December</p>
+          <div class="col-lg-4 col-md-6">
+            <div class="event" data-aos="fade-up" data-aos-delay="300">
+              <img src="assets/img/events/3.jpg" alt="event 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Zenius Solusi Pembelajaran Jarak Jauh</a></h3>
+                <p>Bandung</p>
+                <div class="social">
+                <h4>Rp80.000</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="event" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/img/events/4.jpg" alt="event 4" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Is Passion Overrated?</a></h3>
+                <p>Yogyakarta</p>
+                <div class="social">
+                <h4>Rp150.000</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="event" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/img/events/5.jpg" alt="event 5" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Satu Hati Menuju Indonesia Maju</a></h3>
+                <p>Live webinar</p>
+                <div class="social">
+                <h4>Gratis | Free</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="event" data-aos="fade-up" data-aos-delay="300">
+              <img src="assets/img/events/6.jpg" alt="event 6" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Diskusi Film Indonesia</a></h3>
+                <p>Zoom</p>
+                <div class="social">
+                <h4>Rp50.000</h4>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>-->
-    
-    <!-- End About Section -->
+
+    </section>
+    <!-- End Event Section -->
 
 
     <!-- ======= Speakers Section ======= -->
