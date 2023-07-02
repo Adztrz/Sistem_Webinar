@@ -30,6 +30,10 @@ Route::get('/', function () {
 //     return view('login');
 // });
 
+Route::get('/detail-event', function(){
+    return view('event.detail-event');
+});
+
 Route::get('/home',[WebController::class,'index']);
 
 Route::get('/login',[WebController::class,'login']);
