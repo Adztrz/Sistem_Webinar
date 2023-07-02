@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WebController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +22,17 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/index.html', function() {
-    return view('index');
-});
+// Route::get('/index.html', function() {
+//     return view('index');
+// });
 
-Route::get('/login', function () {
-    return view('login');
-});
+// Route::get('/login', function () {
+//     return view('login');
+// });
+
+Route::get('/home',[WebController::class,'index']);
+
+Route::get('/login',[WebController::class,'login']);
 
 Route::get('/event', function (){
     return view('event');
