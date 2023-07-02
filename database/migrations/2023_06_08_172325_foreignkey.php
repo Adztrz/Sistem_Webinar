@@ -18,21 +18,21 @@ return new class extends Migration
                 ->onDelete('cascade');
             });
 
-        Schema::table('speaker', function (Blueprint $table) {
+        Schema::table('speakers', function (Blueprint $table) {
             // Foreign Key ke Users('event_id')
             $table->foreignId('event_id')
                 ->constrained(table: 'events')
                 ->onDelete('cascade');
             });
 
-        Schema::table('registration', function (Blueprint $table) {
+        Schema::table('registrations', function (Blueprint $table) {
             // Foreign Key ke Users('id_user')
             $table->foreignId('user_id')
                 ->constrained(table: 'users')
                 ->onDelete('cascade');
             });
         
-        Schema::table('notification', function (Blueprint $table) {
+        Schema::table('notifications', function (Blueprint $table) {
             // Foreign Key ke Users('event_id')
             $table->foreignId('event_id')
                 ->constrained(table: 'events')
@@ -51,15 +51,15 @@ return new class extends Migration
             $table->dropConstrainedForeignId('user_id');
         });
 
-        Schema::table('pembicara', function (Blueprint $table) {
+        Schema::table('speakers', function (Blueprint $table) {
             $table->dropConstrainedForeignId('event_id');
         });
 
-        Schema::table('pendaftaran', function (Blueprint $table) {
+        Schema::table('registrations', function (Blueprint $table) {
             $table->dropConstrainedForeignId('user_id');
         });
 
-        Schema::table('notifikasi', function (Blueprint $table) {
+        Schema::table('notifications', function (Blueprint $table) {
             $table->dropConstrainedForeignId('event_id');
         });
 

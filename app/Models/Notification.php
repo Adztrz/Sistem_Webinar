@@ -12,7 +12,6 @@ class Notification extends Model
     protected $fillable = 
     [
         'event_id', 
-        'namaEvent', 
         'tanggal', 
         'topikMateri', 
         'sertifikat'

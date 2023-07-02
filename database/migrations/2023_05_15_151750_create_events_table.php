@@ -16,8 +16,9 @@ return new class extends Migration
             $table->id();
             
             //$table->integer("user_id");
+            $table->string("eventName", 256);
             $table->date("eventDate");
-            $table->date("eventLocation");
+            $table->string("eventLocation");
             $table->string("isPaid", 16);
             $table->date("regisStartDate");
             $table->date("regisEndDate");

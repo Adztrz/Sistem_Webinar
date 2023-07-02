@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {   
-        Schema::create('notification', function (Blueprint $table) {
+        Schema::create('notifications', function (Blueprint $table) {
            // $table->integer("id_notifikasi")->primary();
             $table->id();
 
            // $table->integer('event_id');
-            $table->string('namaEvent', 256);
+           //$table->string('namaEvent', 256);
             $table->date('tanggal');
             $table->string('topikMateri', 256);
             $table->string('sertifikat', 256);
