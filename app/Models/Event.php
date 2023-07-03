@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Events extends Model
+class Event extends Model
 {
     use HasFactory;
 
@@ -30,12 +30,12 @@ class Events extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function speakers()
+    public function speaker()
     {
         return $this->hasMany(Speaker::class);
     }
 
-    public function notifications()
+    public function notification()
     {
         return $this->hasMany(Notification::class);
     }

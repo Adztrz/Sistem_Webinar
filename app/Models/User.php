@@ -50,17 +50,17 @@ class User extends Authenticatable
     }
 
      // Relationships
-     public function events()
+     public function event()
      {
          return $this->hasMany(Event::class);
      }
  
-     public function registrations()
+     public function registration()
      {
          return $this->hasMany(Registration::class);
      }
  
-     public function notifications()
+     public function notification()
      {
          return $this->hasMany(Notification::class);
      }
