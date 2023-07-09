@@ -13,7 +13,7 @@
 		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		@endif
 	
-		<form action="/login" method="POST">
+		<form action="/register" method="POST">
 			@csrf
 			<h1>Membuat Akun</h1>
 			<input type="text" name="name" id="name" placeholder="Name"/>			

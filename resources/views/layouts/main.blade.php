@@ -26,6 +26,7 @@
 
 
   <!-- Template Main CSS File -->
+  <link href="signin.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
@@ -44,7 +45,7 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <div class="footer-top">
+    <div class="footer-top ">
       <div class="container">
         <div class="row">
 

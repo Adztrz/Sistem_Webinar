@@ -13,8 +13,6 @@ class WebController extends Controller
 
     public function index()
     {
-        return view('login_register.index', [
-            'title' => 'Login'
-        ]);
+        return view('index');
     }
 }
