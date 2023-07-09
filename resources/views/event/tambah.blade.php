@@ -43,7 +43,7 @@
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <a href="index.html" class="scrollto"><img src="{{ asset('assets/img/logo.png')}}" alt="" title=""></a>
+        <a href="/" class="scrollto"><img src="{{ asset('assets/img/logo.png')}}" alt="" title=""></a>
       </div>
   
       <nav id="navbar" class="navbar order-last order-lg-0">
