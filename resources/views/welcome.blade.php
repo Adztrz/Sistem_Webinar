@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('container')
+@section('child')
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -142,4 +142,3 @@
         </div>
     </body>
 </html>
-@show

@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('container')
+@section('child')
   <!-- ======= Hero Section ======= -->
   <section style="margin-top: 70px;" id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
@@ -604,4 +604,3 @@
 
   </main> 
   <!-- End #main -->
-@show

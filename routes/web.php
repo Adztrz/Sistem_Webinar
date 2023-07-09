@@ -20,8 +20,17 @@ use App\Http\Controllers\EventController;
 // });
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', [
+        "title" => "Home"
+    ]);
 });
+
+Route::get('/event', function () {
+    return view('event.event', [
+        "title" => "Event"
+    ]);
+});
+
 Route::get('/welcome', function () {
     return view('welcome');
 });
