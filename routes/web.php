@@ -33,6 +33,8 @@ Route::get('/', function () {
 
 Route::resource('/event', EventController::class);
 
+Route::resource('/regevent', RegeventController::class);
+
 Route::get('/home',[WebController::class,'index']);
 
 Route::get('/login',[WebController::class,'login']);
