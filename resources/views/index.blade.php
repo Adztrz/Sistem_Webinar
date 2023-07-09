@@ -1118,11 +1118,10 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Jl. Ir Sutami No. 36 <br>
+              Surakarta<br>
+              <strong>Phone:</strong> +62 5589 55488 55<br>
+              <strong>Email:</strong> theevent@example.com<br>
             </p>
 
             <div class="social-links">
@@ -1150,7 +1149,6 @@
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
       -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- End  Footer -->
