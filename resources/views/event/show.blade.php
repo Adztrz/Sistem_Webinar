@@ -25,6 +25,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets/css/style-detail.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/css/show.css') }}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ asset('/css/style-detail.css') }}">
 
   <!-- =======================================================
@@ -36,157 +37,65 @@
   ======================================================== -->
 </head>
 
-<body>
-
-  <!-- ======= Header ======= -->
+<!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <a href="index.html" class="scrollto"><img src="{{ asset('assets/img/logo.png')}}" alt="" title=""></a>
+        <a href="/" class="scrollto"><img src="{{ asset('assets/img/logo.png')}}" alt="" title=""></a>
       </div>
   
       <nav id="navbar" class="navbar order-last order-lg-0">
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a class="buy-tickets scrollto" href="/login">Login</a>
+      <a class="buy-tickets scrollto" href="/login">Logout</a>
 
     </div>
   </header><!-- End Header -->
-  <main id="main">
+  <main id="main" style="margin-top: 100px;">
     
     <!-- ======= Event Section ======= -->
- 
-    <section id="events">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header" style="margin-top:60px;">
-          <h2>Add Event</h2>
-          <p>Please input the detail</p>
+    <section class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-4 mb-sm-5">
+                <div class="card card-style1 border-0">
+                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <img src="{{asset('storage/'.$data->poster)}}" style="width: 400px;">
+                            </div>
+                            <div class="col-lg-6 px-xl-10">
+                                <div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded" style="margin-bottom: 1rem;">
+                                    <h3 class="h2 text-white mb-0">{{ $data->eventName }}</h3>
+                                </div>
+                                <ul class="list-unstyled mb-1-9">
+                                    <li class="mb-2 mb-m-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Harga Tiket Masuk: </span> {{ $data->isPaid }}</li>
+                                    <li class="mb-2 mb-m-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Jenis Kegiatan: </span> {{ $data->kategoriEvent }}</li>
+                                    <li class="mb-2 mb-m-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Tanggal Acara: </span> {{ $data->eventDate }}</li>
+                                    <li class="mb-2 mb-m-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Lokasi: </span><a href="{{ $data->eventLocation }}" a>{{ $data->eventLocation }}</a></li>
+                                </ul>
+                                <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                    <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                    <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                    <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                    <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 mb-4 mb-sm-5">
+                <div>
+                    <span class="section-title text-primary mb-3 mb-sm-4">Informasi Tambahan</span>
+                    <p style="text-align: justify;">{{ $data->kategoriEvent }} {{ $data->eventName }} akan membuka pendaftaran mulai dari tanggal {{ $data->regisStartDate }} dan menutup pendaftaran pada tanggal {{ $data->regisEndDate }}. Kegiatan ini diadakan di <a href="{{ $data->eventName }}">{{ $data->eventLocation }} </a> Pada tanggal {{ $data->eventDate }}. Peserta akan yang mengikuti acara {{ $data->kategoriEvent }} ini akan mendapatkan E-Sertifikat yang dapat diunduh mulai dari tanggal {{ $data->certificateStartDate }}. Anda dapat mendaftar seminar melalui link dibawah.</p>
+                    <p class="mb-0">Daftar dengan klik <a href="">Daftar Sekarang!!!</a></p>
+                </div>
+            </div>
         </div>
-        @if ($errors->any())
-        <div class="pt-3">
-          <div class="alert alert-danger">
-            <ul>
-              @foreach ($errors->all() as $erorbang)
-                  <li>{{$erorbang}}</li>
-              @endforeach
-            <ul>
-          </div>
-        </div>
-        @endif
-          <form method="POST" action="{{url ('event')}}" enctype="multipart/form-data"> 
-            @csrf
-            <div class="mb-3 row">
-              <label for="name" class="col-sm-1 col-form-label">
-                Name
-            </label>
-              <div class="col-sm-10">	
-                <input type="text" name="name" class="form-control" id="name" placeholder="Contoh: Masa Depan AI">
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <label for="category" class="col-sm-1 col-form-label">
-                Category
-            </label>
-              <div class="col-sm-10">	
-                <select class="form-select" name="category" id="category">
-                  <option selected value = "">Choose Category</option>
-                  <option value="Seminar">Seminar</option>
-                  <option value="Webinar">Webinar</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <label for="evd" class="col-sm-1 col-form-label">
-                Date
-            </label>
-              <div class="col-sm-10">	
-                <input type="text" name="evd" class="form-control" id="evd" placeholder="Contoh: 2023-07-10">
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <label for="loc" class="col-sm-1 col-form-label">
-                Event Link
-            </label>
-              <div class="col-sm-10">	
-                <input type="text" name="loc" class="form-control" id="loc" placeholder="Contoh: https://goo.gl/maps/XpoK3FEBoxztJoS96">
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <label for="price" class="col-sm-1 col-form-label">
-                Price
-            </label>
-              <div class="col-sm-10">	
-                <input type="text" name="price" class="form-control" id="price" placeholder="Contoh: Free, Contoh Lain: Rp60.000">
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <label for="regsd" class="col-sm-1 col-form-label">
-                Registration Start Date
-            </label>
-              <div class="col-sm-10">	
-                <input type="text" name="regsd" class="form-control" id="regsd" placeholder="Contoh: 2023-06-20">
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <label for="reged" class="col-sm-1 col-form-label">
-                Registration End Date
-            </label>
-              <div class="col-sm-10">	
-                <input type="text" name="reged" class="form-control" id="reged" placeholder="Contoh: 2023-06-30">
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <label for="csd" class="col-sm-1 col-form-label">
-                Certificate Start Date
-            </label>
-              <div class="col-sm-10">	
-                <input type="text" name="csd" class="form-control" id="csd" placeholder="Contoh: 2023-07-15">
-              </div>
-            </div> 
-
-            <div class="mb-3 row">
-              <label for="ct" class="col-sm-1 col-form-label">
-                Certificate Template
-            </label>
-              <div class="col-sm-10">	
-                <input name="ct" class="form-control" type="file" id="ct">
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <label for="pst" class="col-sm-1 col-form-label">
-                Poster
-            </label>
-              <div class="col-sm-10">	
-                <input name="pst" class="form-control" type="file" id="pst">
-              </div>
-            </div>
-
-            <div class="mb-3 row">
-              <div class="col">
-                  <button type="submit" name="aksi" value="add" class="btn btn-primary">
-                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
-                    Add
-                  </button>
-                <a href="/event" type="button" class="btn btn-danger">
-                  <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                  Cancel
-                </a>
-              </div>
-            </div>
-          </form>
-
-        </div>
-      </div>
-
+    </div>
+</section>
     </section>
     <!-- End Event Section -->
         
@@ -200,7 +109,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <img src="{{ asset('assets/img/logo.png')}}" alt="TheEvenet">
+            <img src="assets/img/logo.png" alt="TheEvenet">
             <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
           </div>
 
@@ -270,14 +179,14 @@
   
   
   <!-- Vendor JS Files -->
-  <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
-  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
-  <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{ asset('assets/js/main.js')}}"></script>
+  <script src="assets/js/main.js"></script>
   <script type="text/javascript" src="{{ asset('/js/main.js') }}"></script>
 
   

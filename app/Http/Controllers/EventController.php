@@ -32,7 +32,7 @@ class EventController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'evd' => 'required|date_format:Y-m-d',
-            'loc' => 'required',
+            'loc' => 'required|active_url',
             'price' => 'required',
             'regsd' => 'required|date_format:Y-m-d',
             'reged' =>'required|date_format:Y-m-d',
@@ -44,7 +44,8 @@ class EventController extends Controller
             'name.required' => 'Harap isi Nama Event',
             'evd.date_format' => 'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
             'evd.required' => 'Harap isi Event Date',
-            'loc.required' => 'Harap isi Lokasi Event',
+            'loc.required' => 'Harap isi Event Link',
+            'loc.active_url' => 'Harap isi Event Link dengan URL Lokasi Google Map atau URL Zoom Meeting',
             'price.required' => 'Harap isi Harga Tiket Masuk',
             'regsd.date_format' => 'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
             'regsd.required' => 'Harap isi Registration Start Date',
@@ -81,7 +82,8 @@ class EventController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = event::where('id',$id)->first();
+        return view('event.show', compact('data'));
     }
 
     /**
@@ -101,7 +103,7 @@ class EventController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'evd' => 'required|date_format:Y-m-d',
-            'loc' => 'required',
+            'loc' => 'required|active_url',
             'price' => 'required',
             'regsd' => 'required|date_format:Y-m-d',
             'reged' =>'required|date_format:Y-m-d',
@@ -113,7 +115,8 @@ class EventController extends Controller
             'name.required' => 'Harap isi Nama Event',
             'evd.date_format' => 'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
             'evd.required' => 'Harap isi Event Date',
-            'loc.required' => 'Harap isi Lokasi Event',
+            'loc.required' => 'Harap isi Event Link',
+            'loc.active_url' => 'Harap isi Event Link dengan URL Lokasi Google Map atau URL Zoom Meeting',
             'price.required' => 'Harap isi Harga Tiket Masuk',
             'regsd.date_format' => 'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
             'regsd.required' => 'Harap isi Registration Start Date',

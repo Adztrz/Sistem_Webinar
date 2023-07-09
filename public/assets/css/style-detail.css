@@ -123,6 +123,10 @@ h6 {
   margin-bottom: 10px;
 }
 
+.text-tema{
+  color: #f82249
+}
+
 .section-header p {
   text-align: center;
   padding: 0;
@@ -135,7 +139,9 @@ h6 {
 .section-with-bg {
   background-color: #f6f7fd;
 }
-
+.bg-tema{
+  background: rgba(6, 12, 34, 0.98);
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/

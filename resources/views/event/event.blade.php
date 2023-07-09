@@ -44,7 +44,7 @@
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="" title=""></a>
+        <a href="/" class="scrollto"><img src="assets/img/logo.png" alt="" title=""></a>
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -82,8 +82,8 @@
             </a>
               <img src="{{asset('storage/'.$data->poster)}}" alt="event 1" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">{{ $data->eventName }}</a></h3>
-                <p>{{ $data->eventLocation }}</p>
+                <h3><a href="{{ url('event/'.$data->id)}}">{{ $data->eventName }}</a></h3>
+                <p>{{ $data->kategoriEvent }}</p>
                 <div class="social">
                 <h4>{{ $data->isPaid }}</h4>
                 </div>

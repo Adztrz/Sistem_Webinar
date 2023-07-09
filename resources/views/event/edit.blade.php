@@ -86,14 +86,34 @@
               </div>
             </div>
 
+            @if($data->kategoriEvent=='Seminar')
             <div class="mb-3 row">
               <label for="category" class="col-sm-1 col-form-label">
                 Category
             </label>
               <div class="col-sm-10">	
-                <input type="text" name="category" class="form-control" id="category" placeholder="Contoh: Teknologi" value="{{$data->kategoriEvent}}">
+                <select class="form-select" name="category" id="category">
+                  <option value = "">Choose Category</option>
+                  <option selected value="Seminar">Seminar</option>
+                  <option value="Webinar">Webinar</option>
+                </select>
               </div>
             </div>
+          
+          @elseif($data->jenis_kelamin=='Webinar')
+            <div class="mb-3 row">
+              <label for="category" class="col-sm-1 col-form-label">
+                Category
+            </label>
+              <div class="col-sm-10">	
+                <select class="form-select" name="category" id="category">
+                  <option value = "">Choose Category</option>
+                  <option value="Seminar">Seminar</option>
+                  <option selected value="Webinar">Webinar</option>
+                </select>
+              </div>
+            </div>
+            @endif
 
             <div class="mb-3 row">
               <label for="evd" class="col-sm-1 col-form-label">
@@ -106,7 +126,7 @@
 
             <div class="mb-3 row">
               <label for="loc" class="col-sm-1 col-form-label">
-                Location
+                Event Link
             </label>
               <div class="col-sm-10">	
                 <input type="text" name="loc" class="form-control" id="loc" placeholder="Contoh: Gedung Budi Sasono" value="{{$data->eventLocation}}">
