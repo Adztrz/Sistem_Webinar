@@ -31,7 +31,7 @@ Route::get('/', function () {
 // });
 
 Route::get('/detail-event', function(){
-    return view('event.detail-event');
+    return view('event.event');
 });
 
 Route::get('/home',[WebController::class,'index']);

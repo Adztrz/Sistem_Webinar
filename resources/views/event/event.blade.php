@@ -24,9 +24,9 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style-detail.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('/css/style-detail.css') }}">
 
   <!-- =======================================================
   * Template Name: TheEvent
@@ -40,15 +40,13 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center ">
+  <header id="header" class="d-flex align-items-center">
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
         <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="" title=""></a>
       </div>
-
+  
       <nav id="navbar" class="navbar order-last order-lg-0">
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -62,7 +60,7 @@
  
     <section id="events">
       <div class="container" data-aos="fade-up">
-        <div class="section-header">
+        <div class="section-header" style="margin-top:60px;">
           <h2>Our Event</h2>
           <p>Here are some of our events</p>
         </div>
