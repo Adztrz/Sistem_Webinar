@@ -11,10 +11,10 @@ class Event extends Model
 
     protected $primaryKey = 'id';
     protected $fillable = 
-    [
-        'user_id', 
+    [ 
         'eventName',
-        'eventDate', 
+        'eventDate',
+        'poster', 
         'eventLocation', 
         'isPaid', 
         'regisStartDate', 

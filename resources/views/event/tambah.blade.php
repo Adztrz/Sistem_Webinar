@@ -10,22 +10,21 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon2.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset('assets/img/favicon2.png')}}" rel="icon">
+  <link href="{{ asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style-detail.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href="{{ asset('assets/css/style-detail.css') }}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ asset('/css/style-detail.css') }}">
 
   <!-- =======================================================
@@ -44,15 +43,13 @@
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
-        <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="" title=""></a>
+        <a href="index.html" class="scrollto"><img src="{{ asset('assets/img/logo.png')}}" alt="" title=""></a>
       </div>
-
+  
       <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link" href="event/create">Add</a></li>
-        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a class="buy-tickets scrollto" href="">Logout</a>
+      <a class="buy-tickets scrollto" href="/login">Login</a>
 
     </div>
   </header><!-- End Header -->
@@ -63,83 +60,115 @@
     <section id="events">
       <div class="container" data-aos="fade-up">
         <div class="section-header" style="margin-top:60px;">
-          <h2>Our Event</h2>
-          <p>Here are some of our events</p>
+          <h2>Add Event</h2>
+          <p>Please input the detail</p>
         </div>
+          <form method="POST" action="{{url ('event')}}" enctype="multipart/form-data"> 
+            @csrf
+            <div class="mb-3 row">
+              <label for="name" class="col-sm-1 col-form-label">
+                Name
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="name" class="form-control" id="name" placeholder="Contoh: Masa Depan AI">
+              </div>
+            </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/events/1.jpg" alt="event 1" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Mata Kita Social Venture</a></h3>
-                <p>Solo</p>
-                <div class="social">
-                <h4>Rp100.000</h4>
-                </div>
+            <div class="mb-3 row">
+              <label for="category" class="col-sm-1 col-form-label">
+                Category
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="category" class="form-control" id="category" placeholder="Contoh: Teknologi">
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/events/2.jpg" alt="event 2" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Web Developer From Zero to Hero</a></h3>
-                <p>Semarang</p>
-                <div class="social">
-                <h4>Rp75.000</h4>
-                </div>
+
+            <div class="mb-3 row">
+              <label for="evd" class="col-sm-1 col-form-label">
+                Date
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="evd" class="form-control" id="evd" placeholder="Contoh: 2023-07-10">
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/events/3.jpg" alt="event 3" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Zenius Solusi Pembelajaran Jarak Jauh</a></h3>
-                <p>Bandung</p>
-                <div class="social">
-                <h4>Rp80.000</h4>
-                </div>
+
+            <div class="mb-3 row">
+              <label for="loc" class="col-sm-1 col-form-label">
+                Location
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="loc" class="form-control" id="loc" placeholder="Contoh: Gedung Budi Sasono">
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/events/4.jpg" alt="event 4" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Is Passion Overrated?</a></h3>
-                <p>Yogyakarta</p>
-                <div class="social">
-                <h4>Rp150.000</h4>
-                </div>
+
+            <div class="mb-3 row">
+              <label for="price" class="col-sm-1 col-form-label">
+                Price
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="price" class="form-control" id="price" placeholder="Contoh: Free, Contoh Lain: Rp60.000">
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/events/5.jpg" alt="event 5" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Satu Hati Menuju Indonesia Maju</a></h3>
-                <p>Live webinar</p>
-                <div class="social">
-                <h4>Gratis | Free</h4>
-                </div>
+
+            <div class="mb-3 row">
+              <label for="regsd" class="col-sm-1 col-form-label">
+                Registration Start Date
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="regsd" class="form-control" id="regsd" placeholder="Contoh: 2023-06-20">
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/events/6.jpg" alt="event 6" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Diskusi Film Indonesia</a></h3>
-                <p>Zoom</p>
-                <div class="social">
-                <h4>Rp50.000</h4>
-                </div>
+
+            <div class="mb-3 row">
+              <label for="reged" class="col-sm-1 col-form-label">
+                Registration End Date
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="reged" class="form-control" id="reged" placeholder="Contoh: 2023-06-30">
               </div>
             </div>
-          </div>
+
+            <div class="mb-3 row">
+              <label for="csd" class="col-sm-1 col-form-label">
+                Certificate Start Date
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="csd" class="form-control" id="csd" placeholder="Contoh: 2023-07-15">
+              </div>
+            </div> 
+
+            <div class="mb-3 row">
+              <label for="ct" class="col-sm-1 col-form-label">
+                Certificate Template
+            </label>
+              <div class="col-sm-10">	
+                <input name="ct" class="form-control" type="file" id="ct">
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+              <label for="pst" class="col-sm-1 col-form-label">
+                Poster
+            </label>
+              <div class="col-sm-10">	
+                <input name="pst" class="form-control" type="file" id="pst">
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+              <div class="col">
+                  <button type="submit" name="aksi" value="add" class="btn btn-primary">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    Add
+                  </button>
+                <a href="/event" type="button" class="btn btn-danger">
+                  <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                  Cancel
+                </a>
+              </div>
+            </div>
+          </form>
+
         </div>
       </div>
 
@@ -156,7 +185,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <img src="assets/img/logo.png" alt="TheEvenet">
+            <img src="{{ asset('assets/img/logo.png')}}" alt="TheEvenet">
             <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
           </div>
 
@@ -226,14 +255,14 @@
   
   
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ asset('assets/js/main.js')}}"></script>
   <script type="text/javascript" src="{{ asset('/js/main.js') }}"></script>
 
   

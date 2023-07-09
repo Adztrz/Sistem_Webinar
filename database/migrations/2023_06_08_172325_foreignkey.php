@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('events', function (Blueprint $table) {
+        //Schema::table('events', function (Blueprint $table) {
             // Foreign Key ke Users('id_user')
-            $table->foreignId('user_id')
-                ->constrained(table: 'users')
-                ->onDelete('cascade');
-            });
+            //$table->foreignId('user_id')
+            //    ->constrained(table: 'users')
+            //    ->onDelete('cascade');
+            //});
 
         Schema::table('speakers', function (Blueprint $table) {
             // Foreign Key ke Users('event_id')
@@ -47,9 +47,9 @@ return new class extends Migration
     public function down(): void
     {
         
-        Schema::table('events', function (Blueprint $table) {
-            $table->dropConstrainedForeignId('user_id');
-        });
+        //Schema::table('events', function (Blueprint $table) {
+        //    $table->dropConstrainedForeignId('user_id');
+        //});
 
         Schema::table('speakers', function (Blueprint $table) {
             $table->dropConstrainedForeignId('event_id');

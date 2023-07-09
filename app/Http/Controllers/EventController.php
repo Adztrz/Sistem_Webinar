@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $events = event::all();
+        return view('event.event', compact('events'));
     }
 
     /**
@@ -19,7 +21,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('event.tambah');
     }
 
     /**
@@ -27,7 +29,21 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            'eventName'=>$request->name,
+            'eventDate'=>$request->evd,
+            'eventLocation'=>$request->loc,
+            'isPaid'=>$request->price,
+            'regisStartDate'=>$request->regsd,
+            'regisEndDate'=>$request->reged,
+            'certificate'=>$request->ct->store('certificate-template'),
+            'poster'=>$request->ct->store('poster'),
+            'certificateStartDate'=>$request->csd,
+            'kategoriEvent'=>$request->category,
+        ];
+
+        event::create($data);
+        return redirect()->to('event');
     }
 
     /**

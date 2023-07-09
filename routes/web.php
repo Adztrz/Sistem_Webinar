@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,17 +31,12 @@ Route::get('/', function () {
 //     return view('login');
 // });
 
-Route::get('/detail-event', function(){
-    return view('event.event');
-});
+Route::resource('/event', EventController::class);
 
 Route::get('/home',[WebController::class,'index']);
 
 Route::get('/login',[WebController::class,'login']);
 
-Route::get('/event', function (){
-    return view('event');
-});
 
 Route::get('/speaker', function () {
     return ('speaker');
