@@ -33,7 +33,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center header-scrooled ">
+  <header id="header" class="d-flex align-items-center header-scrooled  ">
     <div class="container-fluid container-xxl d-flex align-items-center">
 
       <div id="logo" class="me-auto">
@@ -57,7 +57,7 @@
   </header><!-- End Header -->
 
   <div class="container" mt-4>
-    @yield('containerz')
+    @yield('container')
   </div>
 
   <!-- ======= Footer ======= -->
@@ -119,14 +119,6 @@
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
-      -->
       </div>
     </div>
   </footer><!-- End  Footer -->

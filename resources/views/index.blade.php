@@ -2,7 +2,7 @@
 
 @section('container')
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  <section style="margin-top: 70px;" id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1 class="mb-4 pb-0">Seminar<br><span>Multilevel</span> Marketing</h1>
       <p class="mb-4 pb-0">11-12 Juni, Tirtonadi Convention Hall, Surakarta</p>
@@ -602,5 +602,6 @@
     </section>
     <!-- End  F.A.Q Section -->
 
-  </main>
+  </main> 
   <!-- End #main -->
+@show
