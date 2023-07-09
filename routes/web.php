@@ -70,6 +70,8 @@ Route::get('/admin', function () {
 });
 
 Route::get('/login',[LoginController::class,'index']);
+Route::post('/login',[LoginController::class,'authenticate']);
+
 
 Route::get('/login', [RegisterController::class, 'index']);
 Route::post('/login', [RegisterController::class, 'store']);

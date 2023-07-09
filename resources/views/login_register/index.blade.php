@@ -23,10 +23,11 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form action="/login" method="POST">
+			@csrf
 			<h1>Sign in</h1>
-			<input type="email" name="email" id="email" placeholder="Email" />
-			<input type="password" name="password" id="password" placeholder="Password" />
+			<input type="email" name="email" id="email" placeholder="name@example.com" autofocus required />
+			<input type="password" name="password" id="password" placeholder="Password" required />
 			<a href="#">Lupa Password?</a>
 			<button>Sign In</button>
 		</form>
