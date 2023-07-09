@@ -9,12 +9,12 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="home#hero">Home</a></li>
           <li><a class="nav-link" href="/event">Events</a></li>
-          <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
-          <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
-          <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
-          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
+          <li><a class="nav-link scrollto" href="home#speakers">Speakers</a></li>
+          <li><a class="nav-link scrollto" href="home#schedule">Schedule</a></li>
+          <li><a class="nav-link scrollto" href="home#supporters">Sponsors</a></li>
+          <li><a class="nav-link scrollto" href="home#faq">FAQ</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\EventController;
 
 /*
@@ -49,7 +51,6 @@ Route::resource('/regevent', RegeventController::class);
 
 Route::get('/home',[WebController::class,'index']);
 
-Route::get('/login',[WebController::class,'login']);
 
 
 Route::get('/speaker', function () {
@@ -67,3 +68,8 @@ Route::get('/notifikasi', function () {
 Route::get('/admin', function () {
     return ('admin');
 });
+
+Route::get('/login',[LoginController::class,'index']);
+
+Route::get('/login', [RegisterController::class, 'index']);
+Route::post('/login', [RegisterController::class, 'store']);
