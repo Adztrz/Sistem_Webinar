@@ -74,14 +74,15 @@
           </div>
         </div>
         @endif
-          <form method="POST" action="{{url ('event')}}" enctype="multipart/form-data"> 
+          <form action="{{url ('event/'.$data->id)}}" method="POST" enctype="multipart/form-data"> 
             @csrf
+            @method('PUT')
             <div class="mb-3 row">
               <label for="name" class="col-sm-1 col-form-label">
                 Name
             </label>
               <div class="col-sm-10">	
-                <input type="text" name="name" class="form-control" id="name" placeholder="Contoh: Masa Depan AI">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Contoh: Masa Depan AI" value="{{$data->eventName}}">
               </div>
             </div>
 
@@ -90,7 +91,7 @@
                 Category
             </label>
               <div class="col-sm-10">	
-                <input type="text" name="category" class="form-control" id="category" placeholder="Contoh: Teknologi">
+                <input type="text" name="category" class="form-control" id="category" placeholder="Contoh: Teknologi" value="{{$data->kategoriEvent}}">
               </div>
             </div>
 
@@ -99,7 +100,7 @@
                 Date
             </label>
               <div class="col-sm-10">	
-                <input type="text" name="evd" class="form-control" id="evd" placeholder="Contoh: 2023-07-10">
+                <input type="text" name="evd" class="form-control" id="evd" placeholder="Contoh: 2023-07-10" value="{{$data->eventDate}}">
               </div>
             </div>
 
@@ -108,7 +109,7 @@
                 Location
             </label>
               <div class="col-sm-10">	
-                <input type="text" name="loc" class="form-control" id="loc" placeholder="Contoh: Gedung Budi Sasono">
+                <input type="text" name="loc" class="form-control" id="loc" placeholder="Contoh: Gedung Budi Sasono" value="{{$data->eventLocation}}">
               </div>
             </div>
 
@@ -117,7 +118,7 @@
                 Price
             </label>
               <div class="col-sm-10">	
-                <input type="text" name="price" class="form-control" id="price" placeholder="Contoh: Free, Contoh Lain: Rp60.000">
+                <input type="text" name="price" class="form-control" id="price" placeholder="Contoh: Free, Contoh Lain: Rp60.000" value="{{$data->isPaid}}">
               </div>
             </div>
 
@@ -126,7 +127,7 @@
                 Registration Start Date
             </label>
               <div class="col-sm-10">	
-                <input type="text" name="regsd" class="form-control" id="regsd" placeholder="Contoh: 2023-06-20">
+                <input type="text" name="regsd" class="form-control" id="regsd" placeholder="Contoh: 2023-06-20" value="{{$data->regisStartDate}}">
               </div>
             </div>
 
@@ -135,7 +136,7 @@
                 Registration End Date
             </label>
               <div class="col-sm-10">	
-                <input type="text" name="reged" class="form-control" id="reged" placeholder="Contoh: 2023-06-30">
+                <input type="text" name="reged" class="form-control" id="reged" placeholder="Contoh: 2023-06-30" value="{{$data->regisEndDate}}">
               </div>
             </div>
 
@@ -144,7 +145,7 @@
                 Certificate Start Date
             </label>
               <div class="col-sm-10">	
-                <input type="text" name="csd" class="form-control" id="csd" placeholder="Contoh: 2023-07-15">
+                <input type="text" name="csd" class="form-control" id="csd" placeholder="Contoh: 2023-07-15" value="{{$data->certificateStartDate}}">
               </div>
             </div> 
 
@@ -168,9 +169,9 @@
 
             <div class="mb-3 row">
               <div class="col">
-                  <button type="submit" name="aksi" value="add" class="btn btn-primary">
+                  <button type="submit" name="aksi" value="add" class="btn btn-success">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
-                    Add
+                    Edit
                   </button>
                 <a href="/event" type="button" class="btn btn-danger">
                   <i class="fa fa-arrow-left" aria-hidden="true"></i>

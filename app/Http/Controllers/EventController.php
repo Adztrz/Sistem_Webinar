@@ -29,6 +29,36 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'name' => 'required',
+            'evd' => 'required|date_format:Y-m-d',
+            'loc' => 'required',
+            'price' => 'required',
+            'regsd' => 'required|date_format:Y-m-d',
+            'reged' =>'required|date_format:Y-m-d',
+            'ct'=>'required|image',
+            'pst'=>'required|image',
+            'csd' =>'required|date_format:Y-m-d',
+            'category' =>'required',
+        ],[
+            'name.required' => 'Harap isi Nama Event',
+            'evd.date_format' => 'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
+            'evd.required' => 'Harap isi Event Date',
+            'loc.required' => 'Harap isi Lokasi Event',
+            'price.required' => 'Harap isi Harga Tiket Masuk',
+            'regsd.date_format' => 'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
+            'regsd.required' => 'Harap isi Registration Start Date',
+            'reged.date_format' =>'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
+            'reged.required' =>'Harap isi Registration End Date',
+            'ct.required'=>'Harap Upload Template Certificate',
+            'ct.image'=>'Harap Upload Template Certificate dalam Format Gambar',
+            'pst.required'=>'Harap Upload Poster',
+            'pst.image'=>'Harap Upload Poster dalam Format Gambar',
+            'csd.date_format' =>'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
+            'csd.required' =>'Harap isi Certificate Start Date',
+            'category.required' =>'Harap isi kategori event',
+            ]);
+
         $data = [
             'eventName'=>$request->name,
             'eventDate'=>$request->evd,
@@ -37,7 +67,7 @@ class EventController extends Controller
             'regisStartDate'=>$request->regsd,
             'regisEndDate'=>$request->reged,
             'certificate'=>$request->ct->store('certificate-template'),
-            'poster'=>$request->ct->store('poster'),
+            'poster'=>$request->pst->store('poster'),
             'certificateStartDate'=>$request->csd,
             'kategoriEvent'=>$request->category,
         ];
@@ -59,7 +89,8 @@ class EventController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = event::where('id',$id)->first();
+        return view('event.edit', compact('data'));
     }
 
     /**
@@ -67,7 +98,51 @@ class EventController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required',
+            'evd' => 'required|date_format:Y-m-d',
+            'loc' => 'required',
+            'price' => 'required',
+            'regsd' => 'required|date_format:Y-m-d',
+            'reged' =>'required|date_format:Y-m-d',
+            'ct'=>'required|image',
+            'pst'=>'required|image',
+            'csd' =>'required|date_format:Y-m-d',
+            'category' =>'required',
+        ],[
+            'name.required' => 'Harap isi Nama Event',
+            'evd.date_format' => 'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
+            'evd.required' => 'Harap isi Event Date',
+            'loc.required' => 'Harap isi Lokasi Event',
+            'price.required' => 'Harap isi Harga Tiket Masuk',
+            'regsd.date_format' => 'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
+            'regsd.required' => 'Harap isi Registration Start Date',
+            'reged.date_format' =>'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
+            'reged.required' =>'Harap isi Registration End Date',
+            'ct.required'=>'Harap Upload Template Certificate',
+            'ct.image'=>'Harap Upload Template Certificate dalam Format Gambar',
+            'pst.required'=>'Harap Upload Poster',
+            'pst.image'=>'Harap Upload Poster dalam Format Gambar',
+            'csd.date_format' =>'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
+            'csd.required' =>'Harap isi Certificate Start Date',
+            'category.required' =>'Harap isi kategori event',
+            ]);
+
+        $data = [
+            'eventName'=>$request->name,
+            'eventDate'=>$request->evd,
+            'eventLocation'=>$request->loc,
+            'isPaid'=>$request->price,
+            'regisStartDate'=>$request->regsd,
+            'regisEndDate'=>$request->reged,
+            'certificate'=>$request->ct->store('certificate-template'),
+            'poster'=>$request->pst->store('poster'),
+            'certificateStartDate'=>$request->csd,
+            'kategoriEvent'=>$request->category,
+        ];
+
+        event::where('id',$id)->update($data);
+        return redirect()->to('/event');
     }
 
     /**
@@ -75,6 +150,7 @@ class EventController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        event::where('id',$id)->delete();
+        return redirect()->to('/event');
     }
 }

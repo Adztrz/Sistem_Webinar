@@ -66,80 +66,31 @@
           <h2>Our Event</h2>
           <p>Here are some of our events</p>
         </div>
-
         <div class="row">
+          @foreach ($events as $data)  
           <div class="col-lg-4 col-md-6">
             <div class="event" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/events/1.jpg" alt="event 1" class="img-fluid">
+            <form class="d-inline" action="{{url('event/'.$data->id)}}" method="POST">
+              @csrf
+              @method('DELETE')
+              <button type="submit" name="submit" class="btn btn-danger btn-sm" style="width:416px;" onClick="return confirm('Apakah anda yakin ingin menghapus data tersebut?')">
+                  Delete
+              </button>
+            </form>
+            <a href="{{url('event/'.$data->id.'/edit')}}" type="text" type="button" class="btn btn-success btn-sm" style="width:416px;">
+              Edit
+            </a>
+              <img src="{{asset('storage/'.$data->poster)}}" alt="event 1" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.html">Mata Kita Social Venture</a></h3>
-                <p>Solo</p>
+                <h3><a href="speaker-details.html">{{ $data->eventName }}</a></h3>
+                <p>{{ $data->eventLocation }}</p>
                 <div class="social">
-                <h4>Rp100.000</h4>
+                <h4>{{ $data->isPaid }}</h4>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/events/2.jpg" alt="event 2" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Web Developer From Zero to Hero</a></h3>
-                <p>Semarang</p>
-                <div class="social">
-                <h4>Rp75.000</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/events/3.jpg" alt="event 3" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Zenius Solusi Pembelajaran Jarak Jauh</a></h3>
-                <p>Bandung</p>
-                <div class="social">
-                <h4>Rp80.000</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/events/4.jpg" alt="event 4" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Is Passion Overrated?</a></h3>
-                <p>Yogyakarta</p>
-                <div class="social">
-                <h4>Rp150.000</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/events/5.jpg" alt="event 5" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Satu Hati Menuju Indonesia Maju</a></h3>
-                <p>Live webinar</p>
-                <div class="social">
-                <h4>Gratis | Free</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="event" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/events/6.jpg" alt="event 6" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Diskusi Film Indonesia</a></h3>
-                <p>Zoom</p>
-                <div class="social">
-                <h4>Rp50.000</h4>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
 
