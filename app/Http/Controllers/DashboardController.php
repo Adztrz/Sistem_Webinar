@@ -14,3 +14,4 @@ class DashboardController extends Controller
         return view('dashboard.event', compact('events'));
     }
 }
+    

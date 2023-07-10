@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RegisterController;
+use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\LoginController;
@@ -59,6 +60,10 @@ Route::get('/dashboard/event',[DashboardController::class,'event'])->middleware(
 
 Route::resource('/dashboard/admin',UserController::class)->middleware('can:Admin');
 
+
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+})->middleware('auth');
 
 Route::get('/speaker', function () {
     return ('speaker');
