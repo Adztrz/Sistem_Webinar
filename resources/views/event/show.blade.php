@@ -47,7 +47,7 @@
                                         </form>
                                       @if(Gate::check('Admin') || Gate::check('PIC'))
                                         <button type="submit" name="aksi" value="preview" class="btn btn-danger mt-2">
-                                            P   review Sertifikat
+                                            Preview Sertifikat
                                         </button>
                                         @endif
                                     </li>
