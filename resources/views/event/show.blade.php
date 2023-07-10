@@ -1,5 +1,4 @@
 @extends('layouts.main')
-  @include('partials.navbar')
     
   @section('child')
     
@@ -19,14 +18,30 @@
                                     <h2 style="width: 100%;" class="h2 text-white mb-0">{{ $data->nama }}</h2>
                                 </div>
                                 <ul class="list-unstyled mb-1-9">
-                                    <li class="mb-2 mb-m-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Harga Tiket Masuk: </span> {{ $data->harga }}</li>
-                                    <li class="mb-2 mb-m-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Jenis Kegiatan: </span> {{ $data->kategoriEvent }}</li>
-                                    <li class="mb-2 mb-m-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Tanggal Acara: </span> {{ $data->tanggal }}</li>
-                                    <li class="mb-2 mb-m-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Lokasi: </span><a href="{{ $data->link }}" a>{{ $data->lokasi }}</a></li>
-                                    <li class="mb-2 mb-m-3 display-28">
-                                        <button type="submit" name="aksi" value="daftar" class="btn btn-danger">
-                                            Daftar
+                                    <li class="mb-2 mb-md-3 display-28">
+                                        <span class="display-26 text-secondary me-2 font-weight-600">Harga Tiket Masuk:</span>
+                                        {{ $data->harga }}
+                                      </li>
+                                      <li class="mb-2 mb-md-3 display-28">
+                                        <span class="display-26 text-secondary me-2 font-weight-600">Jenis Kegiatan:</span>
+                                        {{ $data->kategoriEvent }}
+                                      </li>
+                                      <li class="mb-2 mb-md-3 display-28">
+                                        <span class="display-26 text-secondary me-2 font-weight-600">Tanggal Acara:</span>
+                                        {{ $data->tanggal }}
+                                      </li>
+                                      <li class="mb-2 mb-md-3 display-28">
+                                        <span class="display-26 text-secondary me-2 font-weight-600">Lokasi:</span>
+                                        <a href="{{ $data->link }}">{{ $data->lokasi }}</a>
+                                      </li>
+                                      <button type="submit" name="aksi" value="daftar" class="btn btn-danger">
+                                        Daftar  
+                                      </button>
+                                      @if(Gate::check('Admin') || Gate::check('PIC'))
+                                        <button type="submit" name="aksi" value="preview" class="btn btn-danger">
+                                            P   review Sertifikat
                                         </button>
+                                        @endif
                                     </li>
                                 </ul>
                                 <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
@@ -43,8 +58,12 @@
             <div class="col-lg-12 mb-4 mb-sm-5">
                 <div>
                     <span class="section-title text-primary mb-3 mb-sm-4">Informasi Tambahan</span>
-                    <p style="text-align: justify;">{{ $data->kategoriEvent }} {{ $data->nama }} akan membuka pendaftaran mulai dari tanggal {{ $data->regawal }} dan menutup pendaftaran pada tanggal {{ $data->regakhir }}. Kegiatan ini diadakan di <a href="{{ $data->link }}">{{ $data->lokasi }} </a> Pada tanggal {{ $data->tanggal }}. Peserta yang mengikuti acara {{ $data->kategoriEvent }} ini akan mendapatkan E-Sertifikat yang dapat diunduh mulai dari tanggal {{ $data->tanggalsertif }}.</p>
-                </div>
+                    <p style="text-align: justify;">
+                      {{ $data->kategoriEvent }} {{ $data->nama }} akan membuka pendaftaran mulai dari tanggal {{ $data->regawal }} dan menutup pendaftaran pada tanggal {{ $data->regakhir }}.
+                      Kegiatan ini diadakan di <a href="{{ $data->link }}">{{ $data->lokasi }}</a> pada tanggal {{ $data->tanggal }}.
+                      Peserta yang mengikuti acara {{ $data->kategoriEvent }} ini akan mendapatkan E-Sertifikat yang dapat diunduh mulai dari tanggal {{ $data->tanggalsertif }}.
+                    </p>
+                  </div>
             </div>
         </div>
     </div>
