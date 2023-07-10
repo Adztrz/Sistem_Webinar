@@ -69,7 +69,7 @@ Route::get('/admin', function () {
     return ('admin');
 });
 
-Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
+Route::get('/login',[LoginController::class,'index'])->name('login')->  middleware('guest');
 Route::post('/login',[LoginController::class,'authenticate']);
 
 Route::post('/logout',[LoginController::class,'logout']);
