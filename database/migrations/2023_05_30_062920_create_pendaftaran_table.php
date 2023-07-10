@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string("event_id");
             $table->string('noidentitas');
             $table->string('no_telp', 16);
+            $table->string('status')->default('Peserta');
             $table->string('paymentProof')->nullable();
             $table->string('sumberInfo');
             $table->timestamps();
