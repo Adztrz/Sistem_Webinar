@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string("poster");
             $table->string("link");
             $table->string("lokasi");
-            $table->boolean("isPaid", 16)->default(false);
+            $table->string("isPaid", 16)->default('0');
             $table->string("harga")->nullable();
             $table->date("regawal");
             $table->date("regakhir");

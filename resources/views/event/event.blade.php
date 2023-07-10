@@ -26,10 +26,10 @@
             </a>
               <img src="{{asset('storage/'.$data->poster)}}" alt="event 1" class="img-fluid">
               <div class="details">
-                <h3><a href="{{ url('event/'.$data->id)}}">{{ $data->eventName }}</a></h3>
+                <h3><a href="{{ url('event/'.$data->id)}}">{{ $data->nama }}</a></h3>
                 <p>{{ $data->kategoriEvent }}</p>
                 <div class="social">
-                <h4>{{ $data->isPaid }}</h4>
+                <h4>{{ $data->harga }}</h4>
                 </div>
               </div>
             </div>

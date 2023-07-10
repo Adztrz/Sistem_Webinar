@@ -32,6 +32,7 @@ class EventController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'evd' => 'required|date_format:Y-m-d',
+            'lokasi'=> 'required',
             'loc' => 'required|active_url',
             'price' => 'required',
             'regsd' => 'required|date_format:Y-m-d',
@@ -44,6 +45,7 @@ class EventController extends Controller
             'name.required' => 'Harap isi Nama Event',
             'evd.date_format' => 'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
             'evd.required' => 'Harap isi Event Date',
+            'lokasi.required' => 'Harap isi Lokasi',
             'loc.required' => 'Harap isi Event Link',
             'loc.active_url' => 'Harap isi Event Link dengan URL Lokasi Google Map atau URL Zoom Meeting',
             'price.required' => 'Harap isi Harga Tiket Masuk',
@@ -61,15 +63,16 @@ class EventController extends Controller
             ]);
 
         $data = [
-            'eventName'=>$request->name,
-            'eventDate'=>$request->evd,
-            'eventLocation'=>$request->loc,
-            'isPaid'=>$request->price,
-            'regisStartDate'=>$request->regsd,
-            'regisEndDate'=>$request->reged,
-            'certificate'=>$request->ct->store('certificate-template'),
+            'nama'=>$request->name,
+            'tanggal'=>$request->evd,
+            'link'=>$request->loc,
+            'lokasi'=>$request->lokasi,
+            'harga'=>$request->price,
+            'regawal'=>$request->regsd,
+            'regakhir'=>$request->reged,
+            'sertifikat'=>$request->ct->store('certificate-template'),
             'poster'=>$request->pst->store('poster'),
-            'certificateStartDate'=>$request->csd,
+            'tanggalsertif'=>$request->csd,
             'kategoriEvent'=>$request->category,
         ];
 
@@ -103,7 +106,9 @@ class EventController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'evd' => 'required|date_format:Y-m-d',
+            'lokasi'=> 'required',
             'loc' => 'required|active_url',
+            'pait' => 'required',
             'price' => 'required',
             'regsd' => 'required|date_format:Y-m-d',
             'reged' =>'required|date_format:Y-m-d',
@@ -115,6 +120,7 @@ class EventController extends Controller
             'name.required' => 'Harap isi Nama Event',
             'evd.date_format' => 'Harap masukkan format tanggal yang sesuai YYYY-MM-DD',
             'evd.required' => 'Harap isi Event Date',
+            'lokasi.required' => 'Harap isi Lokasi',
             'loc.required' => 'Harap isi Event Link',
             'loc.active_url' => 'Harap isi Event Link dengan URL Lokasi Google Map atau URL Zoom Meeting',
             'price.required' => 'Harap isi Harga Tiket Masuk',
@@ -132,15 +138,17 @@ class EventController extends Controller
             ]);
 
         $data = [
-            'eventName'=>$request->name,
-            'eventDate'=>$request->evd,
-            'eventLocation'=>$request->loc,
-            'isPaid'=>$request->price,
-            'regisStartDate'=>$request->regsd,
-            'regisEndDate'=>$request->reged,
-            'certificate'=>$request->ct->store('certificate-template'),
+            'nama'=>$request->name,
+            'tanggal'=>$request->evd,
+            'link'=>$request->loc,
+            'lokasi'=>$request->lokasi,
+            'isPaid'=>$request->pait,
+            'harga'=>$request->price,
+            'regawal'=>$request->regsd,
+            'regakhir'=>$request->reged,
+            'sertifikat'=>$request->ct->store('certificate-template'),
             'poster'=>$request->pst->store('poster'),
-            'certificateStartDate'=>$request->csd,
+            'tanggalsertif'=>$request->csd,
             'kategoriEvent'=>$request->category,
         ];
 

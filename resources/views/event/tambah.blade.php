@@ -55,11 +55,32 @@
             </div>
 
             <div class="mb-3 row">
+              <label for="lokasi" class="col-sm-1 col-form-label">
+                Lokasi
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="lokasi" class="form-control" id="lokasi" placeholder="Contoh: Gedung Budi Sasono, Contoh Lain: Zoom">
+              </div>
+            </div>
+            
+            <div class="mb-3 row">
               <label for="loc" class="col-sm-1 col-form-label">
                 Event Link
             </label>
               <div class="col-sm-10">	
                 <input type="text" name="loc" class="form-control" id="loc" placeholder="Contoh: https://goo.gl/maps/XpoK3FEBoxztJoS96">
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+              <label for="pait" class="col-sm-1 col-form-label">
+                Berbayar
+            </label>
+              <div class="col-sm-10">	
+                <select class="form-select" name="pait" id="pait">
+                  <option selected value='0'>Gratis</option>
+                  <option value='1'>Berbayar</option>
+                </select>
               </div>
             </div>
 

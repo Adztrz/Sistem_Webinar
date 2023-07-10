@@ -10,19 +10,21 @@ class Event extends Model
     use HasFactory;
 
     protected $primaryKey = 'id';
-    protected $fillable = 
-    [ 
-        'eventName',
-        'eventDate',
-        'poster', 
-        'eventLocation', 
-        'isPaid', 
-        'regisStartDate', 
-        'regisEndDate', 
-        'certificate', 
-        'certificateStartDate', 
-        'kategoriEvent'
-    ];
+    // protected $fillable = 
+    // [ 
+    //     'eventName',
+    //     'eventDate',
+    //     'poster', 
+    //     'eventLocation', 
+    //     'isPaid', 
+    //     'regisStartDate', 
+    //     'regisEndDate', 
+    //     'certificate', 
+    //     'certificateStartDate', 
+    //     'kategoriEvent'
+    // ];
+
+    protected $guarded = ['id'];
 
     // Relationships
     public function user()
