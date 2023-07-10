@@ -41,7 +41,7 @@
                     @enderror
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" name="asal_instansi" id="asal_instansi" class="form-control form-control-sm" placeholder="Asal Instansi (Opsional)">
+                    <input type="text" name="asal_instansi" id="asal_instansi" class="form-control form-control-sm @error('asal_instansi') is-invalid @enderror" placeholder="Asal Instansi">
                     <label for="asal_instansi">Asal Instansi</label>
                     @error('asal_instansi')
                         <div class="invalid-feedback">
