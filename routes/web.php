@@ -69,11 +69,12 @@ Route::get('/admin', function () {
     return ('admin');
 });
 
-Route::get('/login',[LoginController::class,'index'])->middleware('guest');
+Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('/login',[LoginController::class,'authenticate']);
 
 Route::post('/logout',[LoginController::class,'logout']);
 
 
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+
