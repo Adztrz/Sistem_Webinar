@@ -13,7 +13,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/siswa">
+            <a class="nav-link" href="/dashboard/event">
               <span data-feather="users"></span>
               Event
             </a>
