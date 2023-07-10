@@ -3,63 +3,82 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Regevent;
+use App\Models\Registration;
+use App\Models\Event;
 
 class RegeventController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
+    public function index(REQUEST $request)
+    {   
+        $data = $request;
+        $event = event::where('id',$request->idevent)->first(); 
+        return view('rege.regform', compact('data','event'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $event = event::where('id',$request->idevent)->first();
+        if($event->isPaid=='1'){
+            $validated = $request->validate([
+                'idevent' => 'required',
+                'uid' => 'required',
+                'telp' => 'required|numeric',
+                'scam' => 'required',
+                'info' => 'required',
+                'pay'=> 'required|image',
+            ],[
+                'idevent.required' => 'Harap pilih event yang sesuai',
+                'uid.required' => 'Harap login terlebih dahulu',
+                'telp.required' => 'Harap isi nomor telepon',
+                'telp.numeric' => 'Harap isi nomor telepon dengan angka saja',
+                'scam.required' => 'Harap isi nomor identitas',
+                'info.required' => 'Harap isi sumber informasi',
+                'pay.required' => 'Harap upload bukti pembayaran',
+                'pay.image' => 'Mohon upload dalam bentuk gambar',
+            ]);
+
+            $data = [
+                'user_id'=>$request->uid,
+                'event_id'=>$request->idevent,
+                'noidentitas'=>$request->scam,
+                'no_telp'=>$request->telp,
+                'sumberInfo'=>$request->info,
+                'paymentProof'=>$request->pay->store('payment-proof'),
+            ];
+            registration::create($data);
+            return redirect()->to('dashboard/event');
+        } 
+        else
+        {
+            $validated = $request->validate([
+                'idevent' => 'required',
+                'uid' => 'required',
+                'telp' => 'required|numeric',
+                'scam' => 'required',
+                'info' => 'required',
+            ],[
+                'idevent.required' => 'Harap pilih event yang sesuai',
+                'uid.required' => 'Harap login terlebih dahulu',
+                'telp.required' => 'Harap isi nomor telepon',
+                'telp.numeric' => 'Harap isi nomor telepon dengan angka saja',
+                'scam.required' => 'Harap isi nomor identitas',
+                'info.required' => 'Harap isi sumber informasi',
+            ]);
+            $data = [
+                'user_id'=>$request->uid,
+                'event_id'=>$request->idevent,
+                'noidentitas'=>$request->scam,
+                'no_telp'=>$request->telp,
+                'sumberInfo'=>$request->info,
+            ];
+            registration::create($data);
+            return redirect()->to('dashboard/event');
+        } 
+        
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }

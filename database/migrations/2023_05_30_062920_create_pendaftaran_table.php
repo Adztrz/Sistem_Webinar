@@ -15,9 +15,10 @@ return new class extends Migration
             //$table->integer("id_pendaftaran")->primary();
             $table->id();
             $table->integer("user_id");
-            $table->integer('noidentitas');
+            $table->string("event_id");
+            $table->string('noidentitas');
             $table->string('no_telp', 16);
-            $table->string('paymentProof');
+            $table->string('paymentProof')->nullable();
             $table->string('sumberInfo');
             $table->timestamps();
 

@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RegeventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +51,9 @@ Route::get('/welcome', function () {
 
 Route::resource('/event', EventController::class);
 
-Route::resource('/regevent', RegeventController::class);
+Route::post('/event/daftar', [RegeventController::class,'index']);
+
+Route::post('/event/daftar-event', [RegeventController::class,'store']);
 
 Route::get('/home',[WebController::class,'index']);
 
