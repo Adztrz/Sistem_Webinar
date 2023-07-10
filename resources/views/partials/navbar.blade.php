@@ -17,7 +17,7 @@
             Welcome Back, {{ auth()->user()->name }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="nav-link scrollto" href="/dashboard">Profile</a></li>
+            <li><a class="nav-link scrollto" href="/dashboard">Dashboard</a></li>
             <li><hr class="dropdown-divider"></li>
             <li>
               <form action="/logout" method="post">
