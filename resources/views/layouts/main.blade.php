@@ -40,14 +40,14 @@
 
 <body>
 
-    @include('partials.navbar');
+    @include('partials.navbar')
 
   <div class="container" mt-4>
-    @yield('child');
+    @yield('child')
   </div>
 
   <!-- ======= Footer ======= -->
-  <<footer id="footer">
+  <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
