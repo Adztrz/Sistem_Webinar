@@ -61,6 +61,12 @@
               Event
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard/pendaftar">
+              <span data-feather="users"></span>
+              Pendaftar
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

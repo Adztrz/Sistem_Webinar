@@ -61,12 +61,16 @@ Route::get('/dashboard',[UserController::class,'dashboard'])->middleware('auth')
 
 Route::get('/dashboard/event',[DashboardController::class,'event'])->middleware('auth');
 
+Route::resource('/dashboard/pendaftar',DashboardController::class)->middleware('auth');
+
+Route::get('/dashboard/pendaftar',[DashboardController::class,'pendaftar'])->middleware('auth');
+
 Route::resource('/dashboard/admin',UserController::class)->middleware('can:Admin');
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-})->middleware('auth');
+// Route::get('/dashboard', function () {
+//     return view('dashboard.index');
+// })->middleware('auth');
 
 Route::get('/speaker', function () {
     return ('speaker');

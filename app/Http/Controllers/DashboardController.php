@@ -31,5 +31,21 @@ class DashboardController extends Controller
 
     return view('dashboard.event', compact('events'));
     }
+
+    public function pendaftar(Request $request)
+    {
+        $regist = registration::all();
+        $user = user::all();
+        return view('dashboard.pendaftar', compact('regist','user'));
+    }
+
+    public function update(Request $request, string $id)
+    {
+        $data = [
+            'status'=>$request->status,
+        ];
+        registration::where('id',$id)->update($data);
+        return redirect()->to('/dashboard/pendaftar');
+    }
 }
     

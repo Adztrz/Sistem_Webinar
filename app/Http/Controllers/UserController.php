@@ -9,7 +9,7 @@ class UserController extends Controller
 {   
     public function dashboard()
     {
-        return view('dashboard.home');
+        return view('dashboard.index');
     }
 
     public function index()
