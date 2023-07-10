@@ -8,12 +8,15 @@
         <div class="section-header" style="margin-top:60px;">
           <h2>Our Event</h2>
           <p>Here are some of our events</p>
+          @if(Gate::check('Admin') || Gate::check('PIC'))
           <a href="event/create" class="btn btn-danger btn-sm" style="float: right;">Tambah Event</a>
+          @endif
         </div>
         <div class="row">
           @foreach ($events as $data)  
           <div class="col-lg-4 col-md-6">
             <div class="event" data-aos="fade-up" data-aos-delay="100">
+            @if(Gate::check('Admin') || Gate::check('PIC'))
             <form class="d-inline" action="{{url('event/'.$data->id)}}" method="POST">
               @csrf
               @method('DELETE')
@@ -24,6 +27,7 @@
             <a href="{{url('event/'.$data->id.'/edit')}}" type="text" type="button" class="btn btn-success btn-sm" style="width:416px;">
               Edit
             </a>
+            @endif
               <img src="{{asset('storage/'.$data->poster)}}" alt="event 1" class="img-fluid">
               <div class="details">
                 <h3><a href="{{ url('event/'.$data->id)}}">{{ $data->nama }}</a></h3>

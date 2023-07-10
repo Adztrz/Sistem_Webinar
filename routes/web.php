@@ -54,7 +54,7 @@ Route::get('/home',[WebController::class,'index']);
 
 Route::get('/dashboard',[UserController::class,'dashboard']);
 
-Route::resource('/dashboard/admin',UserController::class);
+Route::resource('/dashboard/admin',UserController::class)->middleware('can:Admin');
 
 
 Route::get('/speaker', function () {
@@ -65,14 +65,10 @@ Route::get('/schedule', function () {
     return ('schedule');
 });
 
-Route::get('/notifikasi', function () {
-    return ('notifikasi');
-});
-
 
 Route::get('/admin', function () {
     return ('admin');
-});
+})->middleware('can:Admin');
 
 
 
