@@ -18,26 +18,26 @@ return new class extends Migration
             //    ->onDelete('cascade');
             //});
 
-        Schema::table('speakers', function (Blueprint $table) {
-            // Foreign Key ke Users('event_id')
-            $table->foreignId('event_id')
-                ->constrained(table: 'events')
-                ->onDelete('cascade');
-            });
+        // Schema::table('speakers', function (Blueprint $table) {
+        //     // Foreign Key ke Users('event_id')
+        //     $table->foreignId('event_id')
+        //         ->constrained(table: 'events')
+        //         ->onDelete('cascade');
+        //     });
 
-        Schema::table('registrations', function (Blueprint $table) {
-            // Foreign Key ke Users('id_user')
-            $table->foreignId('user_id')
-                ->constrained(table: 'users')
-                ->onDelete('cascade');
-            });
+        // Schema::table('registrations', function (Blueprint $table) {
+        //     // Foreign Key ke Users('id_user')
+        //     $table->foreignId('user_id')
+        //         ->constrained(table: 'users')
+        //         ->onDelete('cascade');
+        //     });
         
-        Schema::table('notifications', function (Blueprint $table) {
-            // Foreign Key ke Users('event_id')
-            $table->foreignId('event_id')
-                ->constrained(table: 'events')
-                ->onDelete('cascade');
-            });
+        // Schema::table('notifications', function (Blueprint $table) {
+        //     // Foreign Key ke Users('event_id')
+        //     $table->foreignId('event_id')
+        //         ->constrained(table: 'events')
+        //         ->onDelete('cascade');
+        //     });
 
     }
 
@@ -51,17 +51,17 @@ return new class extends Migration
         //    $table->dropConstrainedForeignId('user_id');
         //});
 
-        Schema::table('speakers', function (Blueprint $table) {
-            $table->dropConstrainedForeignId('event_id');
-        });
+        // Schema::table('speakers', function (Blueprint $table) {
+        //     $table->dropConstrainedForeignId('event_id');
+        // });
 
-        Schema::table('registrations', function (Blueprint $table) {
-            $table->dropConstrainedForeignId('user_id');
-        });
+        // Schema::table('registrations', function (Blueprint $table) {
+        //     $table->dropConstrainedForeignId('user_id');
+        // });
 
-        Schema::table('notifications', function (Blueprint $table) {
-            $table->dropConstrainedForeignId('event_id');
-        });
+        // Schema::table('notifications', function (Blueprint $table) {
+        //     $table->dropConstrainedForeignId('event_id');
+        // });
 
     }
 };

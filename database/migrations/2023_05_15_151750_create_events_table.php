@@ -14,21 +14,20 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             //$table->integer("id_event")->primary();
             $table->id();
-            
-            //$table->integer("user_id");
-            $table->string("eventName", 256);
-            $table->date("eventDate");
+
+            $table->string("nama", 256);
+            $table->date("tanggal");
             $table->string("poster");
-            $table->string("eventLocation");
-            $table->string("isPaid", 16);
-            $table->date("regisStartDate");
-            $table->date("regisEndDate");
-            $table->string("certificate", 256);
-            $table->date("certificateStartDate");
+            $table->string("link");
+            $table->string("lokasi");
+            $table->boolean("isPaid", 16)->default(false);
+            $table->string("harga")->nullable();
+            $table->date("regawal");
+            $table->date("regakhir");
+            $table->string("sertifikat", 256);
+            $table->date("tanggalsertif");
             $table->string("kategoriEvent", 32);
             $table->timestamps();
-
-            //$table->foreign("user_id")->references("id_user")->on("users")->onDelete("cascade");
         });
 
         
