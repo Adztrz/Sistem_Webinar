@@ -14,7 +14,7 @@ class Regevent extends Model
     [
         'nama',
         'notelp', 
-        'asalinstansi', 
+        'asal_instansi', 
         'sumberinfo' 
         
     ];

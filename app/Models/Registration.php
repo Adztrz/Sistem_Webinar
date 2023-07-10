@@ -12,9 +12,7 @@ class Registration extends Model
     protected $fillable = 
     [
         'user_id', 
-        'noIdentitas', 
-        'noTelp', 
-        'asalInstansi', 
+        'asal_instansi', 
         'isPaid', 
         'paymentProof'
     ];
