@@ -26,7 +26,9 @@ class RegisterController extends Controller
         $validatedData = $request->validate([
             'name' => 'alpha|required|max:255',
             'email' => ['required', 'email', 'unique:users'],
-            'password' => ['required', 'min:5', 'max:255']
+            'password' => ['required', 'min:5', 'max:255'],
+            'asal_instansi' => ['required', 'alpha']
+
         ]);
         
         $validatedData['password'] = bcrypt($validatedData['password']);

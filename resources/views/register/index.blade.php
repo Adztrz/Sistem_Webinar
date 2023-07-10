@@ -40,6 +40,15 @@
                         </div>
                     @enderror
                 </div>
+                <div class="form-floating mb-3">
+                    <input type="text" name="asal_instansi" id="asal_instansi" class="form-control form-control-sm" placeholder="Asal Instansi (Opsional)">
+                    <label for="asal_instansi">Asal Instansi</label>
+                    @error('asal_instansi')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
                 <div class="checkbox mb-3"></div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
             </form>
