@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,9 @@ Route::resource('/regevent', RegeventController::class);
 
 Route::get('/home',[WebController::class,'index']);
 
+Route::get('/dashboard',[UserController::class,'dashboard']);
+
+Route::resource('/dashboard/admin',UserController::class);
 
 
 Route::get('/speaker', function () {
@@ -65,9 +69,14 @@ Route::get('/notifikasi', function () {
     return ('notifikasi');
 });
 
+
 Route::get('/admin', function () {
     return ('admin');
 });
+
+
+
+
 
 Route::get('/login',[LoginController::class,'index'])->name('login')->  middleware('guest');
 Route::post('/login',[LoginController::class,'authenticate']);
