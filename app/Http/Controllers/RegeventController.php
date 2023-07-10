@@ -20,6 +20,7 @@ class RegeventController extends Controller
 
     public function store(Request $request)
     {
+        
         $event = event::where('id',$request->idevent)->first();
         if($event->isPaid=='1'){
             $validated = $request->validate([
@@ -79,6 +80,8 @@ class RegeventController extends Controller
         } 
         
     }
+
+        
 
 
 }

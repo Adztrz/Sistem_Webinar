@@ -41,4 +41,8 @@ class Event extends Model
     {
         return $this->hasMany(Notification::class);
     }
+    public function registrations()
+     {
+         return $this->hasMany(Registration::class);
+     }
 }

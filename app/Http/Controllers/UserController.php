@@ -36,4 +36,6 @@ class UserController extends Controller
         user::where('id',$id)->delete();
         return redirect()->to('/dashboard/admin');
     }
+        
+    
 }
