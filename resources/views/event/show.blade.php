@@ -34,9 +34,17 @@
                                         <span class="display-26 text-secondary me-2 font-weight-600">Lokasi:</span>
                                         <a href="{{ $data->link }}">{{ $data->lokasi }}</a>
                                       </li>
-                                      <button type="submit" name="aksi" value="daftar" class="btn btn-danger">
-                                        Daftar  
-                                      </button>
+                                        <form method="POST" action="{{url ('/event/daftar')}}">
+                                        @csrf
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-10">	
+                                                <input hidden type="text" name="idevent" class="form-control" id="idevent" value="{{ $data->id }}">
+                                            </div>
+                                            </div>
+                                        <button type="submit" name="aksi" value="daftar" class="btn btn-danger">
+                                            Daftar
+                                        </button>
+                                        </form>
                                       @if(Gate::check('Admin') || Gate::check('PIC'))
                                         <button type="submit" name="aksi" value="preview" class="btn btn-danger">
                                             P   review Sertifikat
