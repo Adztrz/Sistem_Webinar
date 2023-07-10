@@ -24,7 +24,7 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|max:255',
+            'name' => 'alpha|required|max:255',
             'email' => ['required', 'email', 'unique:users'],
             'password' => ['required', 'min:5', 'max:255']
         ]);
@@ -33,9 +33,9 @@ class RegisterController extends Controller
 
         User::create($validatedData);
         
-        $request -> session()->flash('Registrasi Sukses'); 
-
-        return redirect('/login');
+       # $request -> session()->flash('Success', 'Registrasi Sukses, Silahkan Login'); 
+        
+        return redirect('/login')->with ('success','Registrasi Berhasil, Silahkan Login');
     }
 
 
