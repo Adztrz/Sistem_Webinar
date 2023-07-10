@@ -30,4 +30,10 @@ class UserController extends Controller
         user::where('id',$id)->update($data);
         return redirect()->to('/dashboard/admin');
     }
+
+    public function destroy(string $id)
+    {
+        user::where('id',$id)->delete();
+        return redirect()->to('/dashboard/admin');
+    }
 }
