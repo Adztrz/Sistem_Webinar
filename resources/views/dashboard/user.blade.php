@@ -37,7 +37,7 @@
   <body>
     
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">THE EVENT</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">THE EVENT</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -47,7 +47,7 @@
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
       @auth
-      <form action="/sign-out" method="post">
+      <form action="/logout" method="post">
         @csrf
         <button class="nav-link px-4" style="background-color: #212529;" type="submit" >Sign Out</button>
       </form>
@@ -172,7 +172,7 @@
                                     </select>
                                 </div>
                             </div>
-                        @elseif($data->role=='Operator')
+                        @elseif($data->role=='PIC')
                             <div class="mb-3 row">
                                 <div class="col-sm-10">	
                                     <select class="form-select" name="role" id="role">

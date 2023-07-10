@@ -47,7 +47,7 @@
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
       @auth
-      <form action="/sign-out" method="post">
+      <form action="/logout" method="post">
         @csrf
         <button class="nav-link px-4" style="background-color: #212529;" type="submit" >Sign Out</button>
       </form>
