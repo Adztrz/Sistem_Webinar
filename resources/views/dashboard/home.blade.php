@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>SMP N 1 DAERAH SINI</title>
+    <title>TheEvent | Dashboard</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
     <link rel="stylesheet" href="{{asset('assets/vendor/fontawesome/css/font-awesome.min.css')}}">
@@ -41,7 +41,7 @@
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <form class="form-control form-control-dark w-90 my-1"   action="{{url('user')}}" method="get">
+  <form class="form-control form-control-dark w-90 my-3"   action="{{url('user')}}" method="get">
     <input class="form-control form-control-dark w-90" type="search" name="katakunci" value="{{Request::get('katakunci')}}" placeholder="Search" aria-label="Search">
   </form>
   <div class="navbar-nav">
