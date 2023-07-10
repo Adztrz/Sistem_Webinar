@@ -6,6 +6,7 @@ use App\Http\Controllers\WebController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +53,9 @@ Route::resource('/regevent', RegeventController::class);
 
 Route::get('/home',[WebController::class,'index']);
 
-Route::get('/dashboard',[UserController::class,'dashboard']);
+Route::get('/dashboard',[UserController::class,'dashboard'])->middleware('auth');
+
+Route::get('/dashboard/event',[DashboardController::class,'event'])->middleware('auth');
 
 Route::resource('/dashboard/admin',UserController::class)->middleware('can:Admin');
 

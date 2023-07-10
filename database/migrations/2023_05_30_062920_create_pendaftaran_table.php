@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('registrations', function (Blueprint $table) {
             //$table->integer("id_pendaftaran")->primary();
             $table->id();
-            //$table->integer("user_id");
+            $table->integer("user_id");
             $table->integer('noidentitas');
             $table->string('no_telp', 16);
             $table->string('paymentProof');
