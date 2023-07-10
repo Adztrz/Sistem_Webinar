@@ -44,8 +44,13 @@
               <td>{{ $loop->iteration }}</td>
               <td>{{ $data->nama }}</td>
               <td>{{ $data->tanggal }}</td>
-              <td><a href="{{ $data->link }}">{{ $data->lokasi }}</a></td>
+              <td>{{ $data->lokasi }}</td>
               <td>{{ $data->kategoriEvent }}</td>
+              <td>
+                <form action="{{ url('event/'.$data->id) }}" method="GET">
+                  <button type="submit" class="btn btn-primary">Detail</button>
+                </form>
+              </td>
             </tr>
             @endforeach
           </tbody>
