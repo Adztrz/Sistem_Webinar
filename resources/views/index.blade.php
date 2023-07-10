@@ -384,74 +384,73 @@
           <!-- Schdule Day 3 -->
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
 
+          <div class="row schedule-item">
+              <div class="col-md-2"><time>09:30 AM</time></div>
+              <div class="col-md-10">
+                <h4>Registration</h4>
+                <p>Peserta seminar masuk ke venue seminar.</p>
+              </div>
+            </div>
+
             <div class="row schedule-item">
               <div class="col-md-2"><time>10:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="assets/img/speakers/2.jpg" alt="Hubert Hirthe">
+                  <img src="assets/img/speakers/1.jpg" alt="Brenden Legros">
                 </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+                <h4>Pembukaan <span>Brenden Legros</span></h4>
+                <p>Pembukaan seminar oleh MC.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:20 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="assets/img/speakers/sandi.jpg" alt="Cole Emmerich">
+                </div>
+                <h4>Seminar Sesi 1. <span>Sandhika Galih</span></h4>
+                <p>Materi: Langkah Pertama sebagai Web Developer Pemula.</p>
               </div>
             </div>
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
+                <h4>Tanya Jawab Sesi 1</h4>
+                <p>Sesi tanya jawab antara peserta seminar dan pembicara.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>11:20 AM</time></div>
+              <div class="col-md-10">
                 <div class="speaker">
-                  <img src="assets/img/speakers/3.jpg" alt="Cole Emmerich">
+                <img src="assets/img/speakers/sandi.jpg" alt="Cole Emmerich">
                 </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+                <h4>Seminar Sesi 2. <span>Sandhika Galih</span></h4>
+                <p>Mengenal Tools dan Teknologi Penting dalam Pengembangan Web.</p>
               </div>
             </div>
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>12:00 AM</time></div>
               <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/1.jpg" alt="Brenden Legros">
-                </div>
-                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
+                <h4>Tanya Jawab Sesi 2</h4>
+                <p>Sesi tanya jawab antara peserta seminar dan pembicara.</p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
+              <div class="col-md-2"><time>12:20 AM</time></div>
               <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/4.jpg" alt="Jack Christiansen">
-                </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/5.jpg" alt="Alejandrin Littel">
-                </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/6.jpg" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+                <h4>Penutupan</h4>
+                <p>Penutupan acara seminar oleh MC.</p>
               </div>
             </div>
 
           </div>
-          <!-- End Schdule Day 2 -->
+          <!-- End Schdule Day 3 -->
 
         </div>
 
