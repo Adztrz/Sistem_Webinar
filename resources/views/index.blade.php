@@ -250,17 +250,6 @@
               </div>
             </div>
 
-            <!-- <div class="row schedule-item">
-              <div class="col-md-2"><time>11:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/2.jpg" alt="Hubert Hirthe">
-                </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
-              </div>
-            </div> -->
-
             <div class="row schedule-item">
               <div class="col-md-2"><time>10:20 AM</time></div>
               <div class="col-md-10">

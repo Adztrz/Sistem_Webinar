@@ -1,4 +1,4 @@
-<header id="header" class="d-flex align-items-center header-scrolled">
+<header id="header" class="d-flex align-items-center ">
   <div class="container-fluid container-xxl d-flex align-items-center">
     <div id="logo" class="me-auto">
       <a href="/" class="scrollto"><img src="assets/img/logo.png" alt="" title=""></a>
@@ -8,10 +8,7 @@
       <ul>
         @auth
         <li><a class="nav-link scrollto" href="home#hero">Home</a></li>
-        <li><a class="nav-link" href="/event">My Events</a></li>
-        <li><a class="nav-link scrollto" href="home#speakers">Speakers</a></li>
-        <li><a class="nav-link scrollto" href="home#schedule">My Schedule</a></li>
-        <li><a class="nav-link scrollto" href="home#faq">FAQ</a></li>
+        <li><a class="nav-link" href="/event">Events</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Welcome Back, {{ auth()->user()->name }}

@@ -44,47 +44,36 @@
   </div>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top ">
+  <<footer id="footer">
+    <div class="footer-top">
       <div class="container">
         <div class="row">
-
+  
           <div class="col-lg-3 col-md-6 footer-info">
             <img src="assets/img/logo.png" alt="TheEvent">
-            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
+            <p>"TheEvent" is a registration website that provides various seminars and webinars, offering users the opportunity to expand their knowledge, participate in discussions, and connect with experts in various fields. The website is designed to facilitate virtual meetings between renowned speakers and participants from all over Indonesia.</p>
           </div>
-
+  
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
             </ul>
           </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
+  
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-              Jl. Ir Sutami No. 36 <br>
+              Jl. Ir Sutami No. 36<br>
               Surakarta<br>
               <strong>Phone:</strong> +62 5589 55488 55<br>
               <strong>Email:</strong> theevent@example.com<br>
             </p>
-
+  
             <div class="social-links">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -92,19 +81,23 @@
               <a href="#" class="google-plus"><i class="bi bi-instagram"></i></a>
               <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
-
           </div>
-
         </div>
       </div>
     </div>
-
+  
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-center">
+            <p>&copy; Copyright
+              <strong>TheEvent</strong>. All Rights Reserved</p>
+          </div>
+        </div>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </footer>
+  <!-- End  Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   
