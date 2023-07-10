@@ -159,7 +159,7 @@
                 <td>{{ $data->role }}</td>
                 
                 <td>
-                    <form action="{{url ('/dashboard/admin'.$data->id)}}" method="POST">
+                    <form action="{{url ('/dashboard/admin/'.$data->id)}}" method="POST">
                     @csrf
                     @method('PUT')
                         @if($data->role=='Admin')
@@ -200,7 +200,7 @@
                     </form>
                 </td>
                 <td>
-                  <form class="d-inline" action="{{url('user/'.$data->id)}}" method="POST">
+                  <form class="d-inline" action="{{url('dashboard/admin/'.$data->id)}}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" name="submit" class="btn btn-danger btn-sm" onClick="return confirm('Apakah anda yakin ingin menghapus data tersebut?')">
@@ -212,7 +212,6 @@
             @endforeach
           </tbody>
         </table>
-        {{ $user->withQueryString()->links()}}
       </div>
     </main>
   </div>
