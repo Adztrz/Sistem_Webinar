@@ -52,7 +52,6 @@
               <th scope="col">Lokasi</th>
               <th scope="col">Jenis Event</th>
               <th scope="col">Unduh Sertifikat</th>
-              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
