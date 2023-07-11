@@ -55,7 +55,7 @@
                                             $certificateLink = $diffInDays >= 0 ? asset('storage/app/public/certificate_template/' . $registration->user_id . '/' . $data->certificate_template) : '';
                                             $extension = pathinfo($data->certificate_template, PATHINFO_EXTENSION);
                                         @endphp
-                                        @if ($diffInDays >= 0)
+                                        @if ($diffInDays <= 0)
                                             Dalam {{ $diffInDays }} Hari
                                         @else
                                             @if (in_array($extension, ['jpg', 'jpeg', 'png', 'gif']))
