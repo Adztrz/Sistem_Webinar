@@ -45,6 +45,7 @@
                                       </li>
                                       <li class="mb-2 mb-md-3 display-28">
                                         <span class="display-26 text-secondary me-2 font-weight-600">Unduh Sertifikat:</span>
+                                        @if($registration = \App\Models\Registration::where('user_id', Auth::user()->id)->where('event_id', $data->id)->first() != NULL)
                                         @php
                                             $registration = \App\Models\Registration::where('user_id', Auth::user()->id)
                                                 ->where('event_id', $data->id)
@@ -64,6 +65,7 @@
                                             @else
                                                 <a href="{{ $certificateLink }}" download>Sertifikat</a>
                                             @endif
+                                        @endif
                                         @endif
                                     </li>
                                     
