@@ -21,7 +21,7 @@
               <h3><a href="{{ url('event/'.$data->id)}}">{{ $data->nama }}</a></h3>
               <p>{{ $data->kategoriEvent }}</p>
               <div class="social">
-                <h4>{{ $data->harga }}</h4>
+                <h4>Rp. {{ $data->harga }}</h4>
               </div>
               @if(Gate::check('Admin') || Gate::check('PIC'))
               <div class="buttons mt-auto">
