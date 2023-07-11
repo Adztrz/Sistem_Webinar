@@ -1,6 +1,9 @@
 @extends('layouts.main')
 
 @section('child')
+<link rel="stylesheet" type="text/css" href="/css/dashboard.css">
+<link rel="stylesheet" type="text/css" href="/css/dashboard.css">
+
 <div class="container-fluid">
   <div class="row py-3">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -45,5 +48,7 @@
     </main>
   </div>
 </div>
+
+<script type="text/javascript" src="{{ asset('/js/dashboard.js') }}"></script>
 
 @endsection

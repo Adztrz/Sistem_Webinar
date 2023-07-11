@@ -32,6 +32,7 @@
   <link href="signin.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+
   <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
   <link href="{{ asset('assets/css/style-detail.css') }}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ asset('/css/style-detail.css') }}">
@@ -113,10 +114,14 @@
   <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{ asset('assets/js/main.js')}}"></script>
+  <script src="{{ asset('/assets/js/main.js')}}"></script>
+  <script src="{{ asset('/assets/js/dashboards.js')}}"></script>
+
   <script type="text/javascript" src="{{ asset('/js/main.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('/js/dashboard.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
 
   
-</body>
+</body> 
 
 </html>
