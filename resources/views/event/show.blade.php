@@ -25,7 +25,7 @@
                                       <li class="mb-2 mb-md-3 display-28">
                                     <li class="mb-2 mb-md-3 display-28">
                                         <span class="display-26 text-secondary me-2 font-weight-600">Harga Tiket Masuk:</span>
-                                        Rp. {{ $data->harga }}
+                                        {{ $data->harga }}
                                       </li>
                                       <li class="mb-2 mb-md-3 display-28">
                                         <span class="display-26 text-secondary me-2 font-weight-600">Jenis Kegiatan:</span>
