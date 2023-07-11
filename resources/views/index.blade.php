@@ -101,7 +101,7 @@
     </section>
     <!-- End Event Section -->
 
-
+{{-- 
     <!-- ======= Speakers Section ======= -->
     <section id="speakers">
       <div class="container" data-aos="fade-up">
@@ -202,8 +202,8 @@
         </div>
       </div>
 
-    </section><!-- End Speakers Section -->
-
+    </section><!-- End Speakers Section --> --}}
+{{-- 
     <!-- ======= Schedule Section ======= -->
     <section id="schedule" class="section-with-bg">
       <div class="container" data-aos="fade-up">
@@ -445,7 +445,7 @@
 
       </div>
 
-    </section><!-- End Schedule Section -->
+    </section><!-- End Schedule Section --> --}}
 
     <!-- ======= Supporters Section ======= -->
     <section id="supporters" class="section-with-bg">

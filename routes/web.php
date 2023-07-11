@@ -37,9 +37,6 @@ Route::get('/event', function () {
     ]);
 });
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
 
 // Route::get('/index.html', function() {
 //     return view('index');

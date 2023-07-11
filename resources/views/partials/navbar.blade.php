@@ -31,9 +31,9 @@
         </li>
         @else
         <li><a class="nav-link scrollto" href="home#hero">Home</a></li>
-        <li><a class="nav-link" href="/event">Events</a></li>
-        <li><a class="nav-link scrollto" href="home#speakers">Speakers</a></li>
-        <li><a class="nav-link scrollto" href="home#schedule">Schedule</a></li>
+        <li><a class="nav-link scrollto" href="home#events">Events</a></li>
+        {{-- <li><a class="nav-link scrollto" href="home#speakers">Speakers</a></li> --}}
+        {{-- <li><a class="nav-link scrollto" href="home#schedule">Schedule</a></li> --}}
         <li><a class="nav-link scrollto" href="home#supporters">Sponsors</a></li>
         <li><a class="nav-link scrollto" href="home#faq">FAQ</a></li>
       </ul>
