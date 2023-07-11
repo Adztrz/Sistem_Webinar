@@ -22,11 +22,14 @@ return new class extends Migration
             $table->string("lokasi");
             $table->string("isPaid", 16)->default('0');
             $table->string("harga")->nullable();
+            $table->string("pembicara");
+            $table->string("instansi");
             $table->date("regawal");
             $table->date("regakhir");
             $table->string("sertifikat", 256);
             $table->date("tanggalsertif");
             $table->string("kategoriEvent", 32);
+            $table->string("topik");
             $table->timestamps();
         });
 

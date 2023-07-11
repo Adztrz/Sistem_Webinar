@@ -133,6 +133,24 @@
                 <input type="text" name="regsd" class="form-control" id="regsd" placeholder="Contoh: 2023-06-20" value="{{$data->regawal}}">
               </div>
             </div>
+            
+            <div class="mb-3 row">
+              <label for="pembicara" class="col-sm-1 col-form-label">
+                Pembicara
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="pembicara" class="form-control" id="pembicara" placeholder="Contoh: Sandhika Galih" value="{{$data->pembicara}}">
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+              <label for="instansi" class="col-sm-1 col-form-label">
+                Asal Instansi
+            </label>
+              <div class="col-sm-10">	
+                <input type="text" name="instansi" class="form-control" id="instansi" placeholder="Contoh: Web Programming UNPAS" value="{{$data->instansi}}">
+              </div>
+            </div>
 
             <div class="mb-3 row">
               <label for="reged" class="col-sm-1 col-form-label">
@@ -151,6 +169,15 @@
                 <input type="text" name="csd" class="form-control" id="csd" placeholder="Contoh: 2023-07-15" value="{{$data->tanggalsertif}}">
               </div>
             </div> 
+
+            <div class="mb-3 row">
+              <label for="topik" class="col-sm-1 col-form-label">
+                Topik Materi
+            </label>
+              <div class="col-sm-10">	
+                <input name="topik" class="form-control" type="file" id="topik">
+              </div>
+            </div>
 
             <div class="mb-3 row">
               <label for="ct" class="col-sm-1 col-form-label">
