@@ -20,7 +20,7 @@
                                 <ul class="list-unstyled mb-1-9">
                                     <li class="mb-2 mb-md-3 display-28">
                                         <span class="display-26 text-secondary me-2 font-weight-600">Pembicara:</span>
-                                        {{ $data->tanggal }}
+                                        {{ $data->pembicara }}
                                       </li>
                                       <li class="mb-2 mb-md-3 display-28">
                                     <li class="mb-2 mb-md-3 display-28">
