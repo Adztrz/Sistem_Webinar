@@ -1,5 +1,4 @@
 @extends('layouts.main')
-  @include('partials.navbar')
     
   @section('child')
     <!-- ======= Event Section ======= -->
