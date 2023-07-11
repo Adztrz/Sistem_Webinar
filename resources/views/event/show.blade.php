@@ -19,8 +19,13 @@
                                 </div>
                                 <ul class="list-unstyled mb-1-9">
                                     <li class="mb-2 mb-md-3 display-28">
+                                        <span class="display-26 text-secondary me-2 font-weight-600">Pembicara:</span>
+                                        {{ $data->tanggal }}
+                                      </li>
+                                      <li class="mb-2 mb-md-3 display-28">
+                                    <li class="mb-2 mb-md-3 display-28">
                                         <span class="display-26 text-secondary me-2 font-weight-600">Harga Tiket Masuk:</span>
-                                        {{ $data->harga }}
+                                        Rp. {{ $data->harga }}
                                       </li>
                                       <li class="mb-2 mb-md-3 display-28">
                                         <span class="display-26 text-secondary me-2 font-weight-600">Jenis Kegiatan:</span>
@@ -31,9 +36,37 @@
                                         {{ $data->tanggal }}
                                       </li>
                                       <li class="mb-2 mb-md-3 display-28">
+                                        <span class="display-26 text-secondary me-2 font-weight-600">Ditutup dalam:</span>
+                                        {{ Carbon\Carbon::parse($data->tanggal)->diffInDays(\Carbon\Carbon::now()) }} Hari Lagi
+                                      </li>
+                                      <li class="mb-2 mb-md-3 display-28">
                                         <span class="display-26 text-secondary me-2 font-weight-600">Lokasi:</span>
                                         <a href="{{ $data->link }}">{{ $data->lokasi }}</a>
                                       </li>
+                                      <li class="mb-2 mb-md-3 display-28">
+                                        <span class="display-26 text-secondary me-2 font-weight-600">Unduh Sertifikat:</span>
+                                        @php
+                                            $registration = \App\Models\Registration::where('user_id', Auth::user()->id)
+                                                ->where('event_id', $data->id)
+                                                ->first();
+
+                                            $diffInDays = Carbon\Carbon::parse($data->tanggalsertif)->diffInDays(\Carbon\Carbon::now());
+                                            $certificateLink = $diffInDays >= 0 ? asset('storage/app/public/certificate_template/' . $registration->user_id . '/' . $data->certificate_template) : '';
+                                            $extension = pathinfo($data->certificate_template, PATHINFO_EXTENSION);
+                                        @endphp
+                                        @if ($diffInDays >= 0)
+                                            Dalam {{ $diffInDays }} Hari
+                                        @else
+                                            @if (in_array($extension, ['jpg', 'jpeg', 'png', 'gif']))
+                                                <img src="{{ $certificateLink }}" alt="Certificate Preview" style="max-width: 100%; height: auto;">
+                                            @elseif (in_array($extension, ['pdf']))
+                                                <embed src="{{ $certificateLink }}" type="application/pdf" width="100%" height="600px">
+                                            @else
+                                                <a href="{{ $certificateLink }}" download>Sertifikat</a>
+                                            @endif
+                                        @endif
+                                    </li>
+                                    
                                       <form method="POST" action="{{ url('/event/daftar') }}">
                                         @csrf
                                         <div class="mb-3 row">

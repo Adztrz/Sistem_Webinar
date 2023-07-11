@@ -51,6 +51,8 @@
               <th scope="col">Tanggal</th>
               <th scope="col">Lokasi</th>
               <th scope="col">Jenis Event</th>
+              <th scope="col">Unduh Sertifikat</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -61,6 +63,28 @@
               <td>{{ $data->tanggal }}</td>
               <td>{{ $data->lokasi }}</td>
               <td>{{ $data->kategoriEvent }}</td>
+              <td>
+                @php
+                $registration = \App\Models\Registration::where('user_id', Auth::user()->id)
+                  ->where('event_id', $data->id)
+                  ->first();
+
+                $diffInDays = Carbon\Carbon::parse($data->tanggalsertif)->diffInDays(\Carbon\Carbon::now());
+                $certificateLink = $diffInDays <= 0 ? asset('storage/app/public/certificate_template/' . $registration->user_id . '/' . $data->certificate_template) : '';
+                $extension = pathinfo($data->certificate_template, PATHINFO_EXTENSION);
+                @endphp
+                @if ($diffInDays >= 0)
+                Dalam {{ $diffInDays }} Hari
+                @else
+                @if (in_array($extension, ['jpg', 'jpeg', 'png', 'gif']))
+                <img src="{{ $certificateLink }}" alt="Certificate Preview" style="max-width: 100%; height: auto;">
+                @elseif (in_array($extension, ['pdf']))
+                <embed src="{{ $certificateLink }}" type="application/pdf" width="100%" height="600px">
+                @else
+                <a href="{{ $certificateLink }}" download>Sertifikat</a>
+                @endif
+                @endif
+              </td>
               <td>
                 <form action="{{ url('event/'.$data->id) }}" method="GET">
                   <button type="submit" class="btn btn-primary">Detail</button>
