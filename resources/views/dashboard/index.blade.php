@@ -1,14 +1,13 @@
 @extends('layouts.main')
 
 @section('child')
-<link rel="stylesheet" type="text/css" href="/css/dashboard.css">
-<link rel="stylesheet" type="text/css" href="/css/dashboard.css">
+<link href="{{ asset('/assets/css/dashboard.css')}}">
 
 <div class="container-fluid">
   <div class="row py-3">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
+        <ul class="nav flex-column style="height: 800px;">
           <br> <br>
           @can('Admin')
           <li class="nav-item">
@@ -20,7 +19,7 @@
           @endcan
           <li class="nav-item">
             <a class="nav-link" href="/dashboard/event">
-              <span data-feather="users"></span>
+              <span data-feather="map"></span>
               Event
             </a>
           </li>

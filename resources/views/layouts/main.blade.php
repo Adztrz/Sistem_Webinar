@@ -30,8 +30,10 @@
 
   <!-- Template Main CSS File -->
   <link href="signin.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  <link href="{{ asset('/assets/css/dashboard.css')}}">
 
   <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
   <link href="{{ asset('assets/css/style-detail.css') }}" rel="stylesheet">
@@ -115,7 +117,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('/assets/js/main.js')}}"></script>
-  <script src="{{ asset('/assets/js/dashboards.js')}}"></script>
+  <script src="{{ asset('/assets/js/dashboard.js')}}"></script>
 
   <script type="text/javascript" src="{{ asset('/js/main.js') }}"></script>
   <script type="text/javascript" src="{{ asset('/js/dashboard.js') }}"></script>
