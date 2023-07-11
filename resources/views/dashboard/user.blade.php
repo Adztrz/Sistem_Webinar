@@ -110,7 +110,7 @@
                     @csrf
                     @method('DELETE')
                     <button type="submit" name="submit" class="btn btn-danger btn-sm" onClick="return confirm('Apakah anda yakin ingin menghapus data tersebut?')">
-                      <i class="fa fa-trash"> </i>
+                      <i data-feather="trash-2"> </i>
                     </button>
                   </form>
                 </td>
