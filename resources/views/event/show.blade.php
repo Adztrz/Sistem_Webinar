@@ -114,7 +114,7 @@
                     <span class="section-title text-primary mb-3 mb-sm-4">Informasi Tambahan</span>
                     <p style="text-align: justify;">
                       {{ $data->kategoriEvent }} {{ $data->nama }} akan membuka pendaftaran mulai dari tanggal {{ $data->regawal }} dan menutup pendaftaran pada tanggal {{ $data->regakhir }}.
-                      Kegiatan ini diadakan di <a href="{{ $data->link }}">{{ $data->lokasi }}</a> pada tanggal {{ $data->tanggal }}.
+                      Kegiatan ini diadakan di <a href="{{ $data->link }}">{{ $data->lokasi }}</a> pada tanggal {{ $data->tanggal }}, {{ $data->kategoriEvent }} {{ $data->nama }} akan diisi oleh {{ $data->pembicara }} dari {{ $data->instansi }}.
                       Peserta yang mengikuti acara {{ $data->kategoriEvent }} ini akan mendapatkan E-Sertifikat yang dapat diunduh mulai dari tanggal {{ $data->tanggalsertif }}.
                     </p>
                   </div>
