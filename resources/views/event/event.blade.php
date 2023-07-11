@@ -2,7 +2,7 @@
     
   @section('child')
     
-  <section id="events">
+  <section id="events" style="margin-bottom: 300px">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
         <br>
