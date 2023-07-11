@@ -20,7 +20,8 @@ class DashboardController extends Controller
     {
     $user = Auth::user();
 
-        // Retrieve registrations for the current user
+    if(Auth::user()->role == 'User'){
+    // Retrieve registrations for the current user
     $registrations = Registration::where('user_id', $user->id)->get();
 
     // Extract event IDs from registrations
@@ -30,6 +31,12 @@ class DashboardController extends Controller
     $events = Event::whereIn('id', $eventIds)->get();
 
     return view('dashboard.event', compact('events'));
+    }else{
+        $events = Event::all();
+        return view('dashboard.event', compact('events'));
+    }
+
+    
     }
 
     public function pendaftar(Request $request)
