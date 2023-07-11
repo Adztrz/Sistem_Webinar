@@ -20,7 +20,7 @@
                                 <ul class="list-unstyled mb-1-9">
                                     <li class="mb-2 mb-md-3 display-28">
                                         <span class="display-26 text-secondary me-2 font-weight-600">Pembicara:</span>
-                                        {{ $data->tanggal }}
+                                        {{ $data->pembicara }}
                                       </li>
                                       <li class="mb-2 mb-md-3 display-28">
                                     <li class="mb-2 mb-md-3 display-28">
@@ -43,7 +43,15 @@
                                         <span class="display-26 text-secondary me-2 font-weight-600">Lokasi:</span>
                                         <a href="{{ $data->link }}">{{ $data->lokasi }}</a>
                                       </li>
+                                      @php
+                                      $registered = \App\Models\Registration::where('user_id', Auth::user()->id)
+                                          ->where('event_id', $data->id)
+                                          ->exists();
+                                  @endphp
+                                  
+                                  @if ($registered)
                                       <li class="mb-2 mb-md-3 display-28">
+<<<<<<< Updated upstream
                                         <span class="display-26 text-secondary me-2 font-weight-600">Unduh Sertifikat:</span>
                                         @if($registration = \App\Models\Registration::where('user_id', Auth::user()->id)->where('event_id', $data->id)->first() != NULL)
                                         @php
@@ -67,6 +75,32 @@
                                             @endif
                                         @endif
                                         @endif
+=======
+                                          <span class="display-26 text-secondary me-2 font-weight-600">Unduh Sertifikat:</span>
+                                          @php
+                                              $diffInDays = Carbon\Carbon::parse($data->tanggalsertif)->diffInDays(\Carbon\Carbon::now());
+                                              $certificateLink = $diffInDays >= 0 ? asset('storage/'.$data->id.'/'.$data->certificate_template) : '';
+                                              $extension = pathinfo($data->certificate_template, PATHINFO_EXTENSION);
+                                          @endphp
+                                          @if ($diffInDays <= 0)
+                                              Dalam {{ $diffInDays }} Hari
+                                          @else
+                                              @if (in_array($extension, ['jpg', 'jpeg', 'png', 'gif']))
+                                                  <img src="{{ $certificateLink }}" alt="Certificate Preview" style="max-width: 100%; height: auto;">
+                                              @elseif (in_array($extension, ['pdf']))
+                                                  <embed src="{{ $certificateLink }}" type="application/pdf" width="100%" height="600px">
+                                              @else
+                                                  <a href="{{ $certificateLink }}" download>Sertifikat</a>
+                                              @endif
+                                          @endif
+                                      </li>
+                                  @endif
+                                        @if (Gate::check('Admin') || Gate::check('PIC'))
+                                        <button type="submit" name="aksi" value="preview" class="btn btn-success ">
+                                            Preview Sertifikat
+                                        </button>
+                                    @endif
+>>>>>>> Stashed changes
                                     </li>
                                     
                                       <form method="POST" action="{{ url('/event/daftar') }}">
@@ -87,11 +121,7 @@
                                             </button>
                                         @endif
                                     </form>
-                                    @if (Gate::check('Admin') || Gate::check('PIC'))
-                                        <button type="submit" name="aksi" value="preview" class="btn btn-danger mt-2">
-                                            Preview Sertifikat
-                                        </button>
-                                    @endif
+                                    
                                     </li>
                                 </ul>
                                 <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
