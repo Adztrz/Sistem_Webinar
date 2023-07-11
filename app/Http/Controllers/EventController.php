@@ -7,6 +7,12 @@ use App\Models\Event;
 
 class EventController extends Controller
 {
+    public function __construct()
+    {
+        // Assign to all EXCEPT specific methods in this Controller
+        $this->middleware('auth')->except('index');
+    }
+
     /**
      * Display a listing of the resource.
      */
