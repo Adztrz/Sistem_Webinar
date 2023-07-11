@@ -88,19 +88,16 @@
                                     <option value="Outstanding" {{ $data->status == 'Outstanding' ? 'selected' : '' }}>Outstanding</option>
                                     <option value="Pembicara" {{ $data->status == 'Pembicara' ? 'selected' : '' }}>Pembicara</option>
                                 </select>
+                                <button type="submit" name="aksi" value="edit" class="btn btn-success" onClick="return confirm('Apakah anda yakin ingin mengubah statusnya?')">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                    Confirm
+                                </button>
                             </div>
                         </div>
                         
                     </form>
                 </td>
                 <td>{{ $data->sumberInfo }}</td>
-                <td>
-                  <td>
-                    <button type="submit" name="aksi" value="edit" class="btn btn-success" onClick="return confirm('Apakah anda yakin ingin mengubah statusnya?')">
-                      <i class="fa fa-check" aria-hidden="true"></i>
-                      Confirm
-                  </button>
-                  </td>
             </tr>
             @endforeach
         </tbody>

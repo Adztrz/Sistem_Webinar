@@ -4,10 +4,10 @@
   <!-- ======= Hero Section ======= -->
   <section style="margin-top: 70px;" id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-4 pb-0">Seminar<br><span>Multilevel</span> Marketing</h1>
-      <p class="mb-4 pb-0">11-12 Juni, Tirtonadi Convention Hall, Surakarta</p>
+      <h1 class="mb-4 pb-0">Platform<br><span>The</span> Events</h1>
+      {{-- <p class="mb-4 pb-0">11-12 Juni, Tirtonadi Convention Hall, Surakarta</p> --}}
       <a href="https://www.youtube.com/watch?v=JK8RG2XUZHM&pp=ygUcU2VtaW5hciBNdWx0aWxldmVsIG1hcmtldGluZw%3D%3D" class="glightbox play-btn mb-4"></a>
-      <a href="#about" class="about-btn scrollto">About The Event</a>
+      <a href="/event" class="about-btn scrollto">More About The Event</a>
     </div>
   </section><!-- End Hero Section -->
 
@@ -59,7 +59,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          {{-- <div class="col-lg-4 col-md-6">
             <div class="event" data-aos="fade-up" data-aos-delay="100">
               <img src="assets/img/events/4.jpg" alt="event 4" class="img-fluid">
               <div class="details">
@@ -82,7 +82,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
           <div class="col-lg-4 col-md-6">
             <div class="event" data-aos="fade-up" data-aos-delay="300">
               <img src="assets/img/events/6.jpg" alt="event 6" class="img-fluid">
