@@ -7,7 +7,7 @@
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
         @auth
-        <li><a class="nav-link scrollto" href="home#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="/home">Home</a></li>
         <li><a class="nav-link" href="/event">Events</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -18,7 +18,7 @@
             <li><a class="nav-link scrollto" href="/dashboard">Dashboard</a></li>
             @endif
             @if(Gate::check('User'))
-            <li><a class="nav-link scrollto" href="/dashboard/event">Dashboard</a></li>
+            <li><a class="nav-link scrollto" href="/dashboard">Dashboard</a></li>
             @endif
             <li><hr class="dropdown-divider"></li>
             <li>
