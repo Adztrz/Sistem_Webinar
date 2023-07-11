@@ -18,7 +18,7 @@
             <li><a class="nav-link scrollto" href="/dashboard">Dashboard</a></li>
             @endif
             @if(Gate::check('User'))
-            <li><a class="nav-link scrollto" href="/dashboard/event">Dashboard</a></li>
+            <li><a class="nav-link scrollto" href="/dashboard">Dashboard</a></li>
             @endif
             <li><hr class="dropdown-divider"></li>
             <li>
