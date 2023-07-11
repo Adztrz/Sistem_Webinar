@@ -60,7 +60,7 @@
               <td>{{ $loop->iteration }}</td>
               <td>{{ $data->nama }}</td>
               <td>{{ $data->tanggal }}</td>
-              <td>{{ $data->lokasi }}</td>
+              <td><a href="{{ $data->link }}">{{ $data->lokasi }}</a></td>
               <td>{{ $data->kategoriEvent }}</td>
               <td>
                 @php
