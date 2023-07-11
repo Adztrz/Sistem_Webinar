@@ -5,6 +5,7 @@
   <section id="events">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
+        <br>
         <h2>Our Event</h2>
         <p>Here are some of our events</p>
         @if(Gate::check('Admin') || Gate::check('PIC'))

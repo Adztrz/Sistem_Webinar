@@ -7,14 +7,14 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
         <br> <br>
-          @if(Gate::check('Admin') || Gate::check('PIC'))
+          @can('Admin')
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/dashboard/admin">
               <span data-feather="user"></span>
               User
             </a>
           </li>
-          @endif
+          @endcan
           <li class="nav-item">
             <a class="nav-link" href="/dashboard/event">
               <span data-feather="users"></span>
