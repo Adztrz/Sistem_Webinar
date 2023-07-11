@@ -59,69 +59,51 @@
           <tbody>
             @foreach ($regist as $data)
             <tr>
-              <td>{{ $loop->iteration }}</td>
-              <td>{{ $data->id }}</td>
-              <td>
-                  @foreach ($user as $data2)
-                      @if($data->user_id == $data2->id)
-                        {{ $data2->name }}
-                      @endif
-                  @endforeach
-              </td>
-              <td>
-                  @foreach ($ngevent as $data3)
-                      @if($data->event_id == $data3->id)
-                        {{ $data3->nama }}
-                      @endif
-                  @endforeach
-              </td>
-              <td>{{ $data->no_telp }}</td>
-              <td>{{ $data->status }}</td>
-              <td>
-                <form action="{{url ('/dashboard/pendaftar/'.$data->id)}}" method="POST">
-                  @csrf
-                  @method('PUT')
-                  @if($data->status=='Peserta')
-                      <div class="mb-3 row">
-                          <div class="col-sm-10">	
-                              <select class="form-select" name="status" id="status">
-                              <option selected value = "Peserta">Peserta</option>
-                              <option value="Outstanding">Outstanding</option>
-                              <option value="Pembicara">Pembicara</option>
-                              </select>
-                          </div>
-                      </div>
-                  @elseif($data->status=='Outstanding')
-                      <div class="mb-3 row">
-                          <div class="col-sm-10">	
-                              <select class="form-select" name="status" id="status">
-                              <option value = "Peserta">Peserta</option>
-                              <option selected value="Outstanding">Outstanding</option>
-                              <option value="Pembicara">Pembicara</option>
-                              </select>
-                          </div>
-                      </div>
-                  @elseif($data->status=="Pembicara")
-                      <div class="mb-3 row">
-                          <div class="col-sm-10">	
-                              <select class="form-select" name="status" id="status">
-                              <option value = "Peserta">Peserta</option>
-                              <option value="Outstanding">Outstanding</option>
-                              <option selected value="Pembicara">Pembicara</option>
-                              </select>
-                          </div>
-                      </div>
-                  @endif
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $data->id }}</td>
+                <td>
+                    @foreach ($user as $data2)
+                        @if ($data->user_id == $data2->id)
+                            {{ $data2->name }}
+                        @endif
+                    @endforeach
+                </td>
+                <td>
+                    @foreach ($ngevent as $data3)
+                        @if ($data->event_id == $data3->id)
+                            {{ $data3->nama }}
+                        @endif
+                    @endforeach
+                </td>
+                <td>{{ $data->no_telp }}</td>
+                <td>{{ $data->status }}</td>
+                <td>
+                    <form action="{{ url('/dashboard/pendaftar/'.$data->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="mb-3 row">
+                            <div class="col-sm-10">
+                                <select class="form-select" name="status" id="status">
+                                    <option value="Peserta" {{ $data->status == 'Peserta' ? 'selected' : '' }}>Peserta</option>
+                                    <option value="Outstanding" {{ $data->status == 'Outstanding' ? 'selected' : '' }}>Outstanding</option>
+                                    <option value="Pembicara" {{ $data->status == 'Pembicara' ? 'selected' : '' }}>Pembicara</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </td>
+                <td>{{ $data->sumberInfo }}</td>
+                <td>
+                  <td>
                     <button type="submit" name="aksi" value="edit" class="btn btn-success" onClick="return confirm('Apakah anda yakin ingin mengubah statusnya?')">
                       <i class="fa fa-check" aria-hidden="true"></i>
                       Confirm
-                    </button>
-                </form>
-              </td>
-              <td>{{ $data->sumberInfo }}</td>
+                  </button>
+                  </td>
             </tr>
             @endforeach
-          </tbody>
+        </tbody>
         </table>
       </div>
     </main>
