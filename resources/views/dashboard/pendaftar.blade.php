@@ -3,21 +3,21 @@
 @section('child')
 <div class="container-fluid mt-5" style="margin-bottom: 250px;">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse margin-top: auto;">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
+        <ul class="nav flex-column" style="height: 800px;">
           <br> <br>
           @can('Admin')
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/dashboard/admin">
-              <span data-feather="user" class=></span>
+              <span data-feather="user"></span>
               User
             </a>
           </li>
           @endcan
           <li class="nav-item">
             <a class="nav-link" href="/dashboard/event">
-              <span data-feather="users"></span>
+              <span data-feather="map"></span>
               Event
             </a>
           </li>

@@ -7,7 +7,7 @@
   <div class="row py-3">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
-        <ul class="nav flex-column style="height: 800px;">
+        <ul class="nav flex-column" style="height: 800px;">
           <br> <br>
           @can('Admin')
           <li class="nav-item">

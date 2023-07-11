@@ -3,10 +3,10 @@
 @section('child')
 <div class="container-fluid mt-5" style="margin-bottom: 250px;">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse margin-top: auto;">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
-        <br> <br>
+        <ul class="nav flex-column" style="height: 800px;">
+          <br> <br>
           @can('Admin')
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/dashboard/admin">
@@ -17,7 +17,7 @@
           @endcan
           <li class="nav-item">
             <a class="nav-link" href="/dashboard/event">
-              <span data-feather="users"></span>
+              <span data-feather="map"></span>
               Event
             </a>
           </li>
@@ -52,6 +52,7 @@
               <th scope="col">Lokasi</th>
               <th scope="col">Jenis Event</th>
               <th scope="col">Unduh Sertifikat</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -60,7 +61,7 @@
               <td>{{ $loop->iteration }}</td>
               <td>{{ $data->nama }}</td>
               <td>{{ $data->tanggal }}</td>
-              <td><a href="{{ $data->link }}">{{ $data->lokasi }}</a></td>
+              <td>{{ $data->lokasi }}</td>
               <td>{{ $data->kategoriEvent }}</td>
               <td>
                 @php

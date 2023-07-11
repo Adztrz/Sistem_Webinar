@@ -5,27 +5,31 @@
 <div class="container-fluid">
   <div class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-      <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
-        <br> <br> <br> 
+      <div class="position-sticky pt-5">
+        <ul class="nav flex-column" style="height: 800px;">
+          <br> <br>
+          @can('Admin')
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/dashboard/admin">
               <span data-feather="user"></span>
               User
             </a>
           </li>
+          @endcan
           <li class="nav-item">
             <a class="nav-link" href="/dashboard/event">
-              <span data-feather="users"></span>
+              <span data-feather="map"></span>
               Event
             </a>
           </li>
+          @if(Gate::check('Admin') || Gate::check('PIC'))
           <li class="nav-item">
             <a class="nav-link" href="/dashboard/pendaftar">
               <span data-feather="users"></span>
               Pendaftar
             </a>
           </li>
+          @endif
           <li class=""> <br> <br> <br> <br> <br> <br> <br> <br>
            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
