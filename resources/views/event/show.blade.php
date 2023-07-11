@@ -54,7 +54,7 @@
                                           <span class="display-26 text-secondary me-2 font-weight-600">Unduh Sertifikat:</span>
                                           @php
                                               $diffInDays = Carbon\Carbon::parse($data->tanggalsertif)->diffInDays(\Carbon\Carbon::now());
-                                              $certificateLink = $diffInDays >= 0 ? asset('storage/'.$data->id.'/'.$data->certificate_template) : '';
+                                              $certificateLink = $diffInDays <= 0 ? asset('storage/'.$data->id.'/'.$data->certificate_template) : '';
                                               $extension = pathinfo($data->certificate_template, PATHINFO_EXTENSION);
                                           @endphp
                                           @if ($diffInDays > 0)
