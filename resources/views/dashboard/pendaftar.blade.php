@@ -6,23 +6,32 @@
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse margin-top: auto;">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
+          <br> <br>
+          @can('Admin')
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/dashboard/admin">
-              <span data-feather="user"></span>
+              <span data-feather="user" class=></span>
               User
             </a>
           </li>
+          @endcan
           <li class="nav-item">
             <a class="nav-link" href="/dashboard/event">
               <span data-feather="users"></span>
               Event
             </a>
           </li>
+          @if(Gate::check('Admin') || Gate::check('PIC'))
           <li class="nav-item">
             <a class="nav-link" href="/dashboard/pendaftar">
               <span data-feather="users"></span>
               Pendaftar
             </a>
+          </li>
+          @endif
+          <li class=""> <br> <br> <br> <br> <br> <br> <br> <br>
+           <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+           <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
           </li>
         </ul>
       </div>
@@ -30,7 +39,7 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-bottom: 250px; margin-top: 50px;">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <div class="btn-toolbar mb-2 mb-md-0"></div>
+        <h1 class="h2">Dashboard Pendaftar</h1>
       </div>
       <h4>Hai, {{ Auth::user()->role }} {{ Auth::user()->name }}</h4>
       <div class="table-responsive">
@@ -39,9 +48,9 @@
             <tr>
               <th scope="col">No.</th>
               <th scope="col">Id Pendaftaran</th>
-              <th scope="col">Nama</th>
-              <th scope="col">No Identitas</th>
-              <th scope="col">Nomor Telepon</th>
+              <th scope="col">Pendaftar</th>
+              <th scope="col">Event</th>
+              <th scope="col">No. Telepon</th>
               <th scope="col">Status</th>
               <th scope="col">Ubah Status</th>
               <th scope="col">Sumber Info</th>
@@ -59,7 +68,13 @@
                       @endif
                   @endforeach
               </td>
-              <td>{{ $data->noidentitas }}</td>
+              <td>
+                  @foreach ($ngevent as $data3)
+                      @if($data->event_id == $data3->id)
+                        {{ $data3->nama }}
+                      @endif
+                  @endforeach
+              </td>
               <td>{{ $data->no_telp }}</td>
               <td>{{ $data->status }}</td>
               <td>

@@ -14,7 +14,12 @@
             Welcome Back, {{ auth()->user()->name }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            @if(Gate::check('Admin') || Gate::check('PIC'))
             <li><a class="nav-link scrollto" href="/dashboard">Dashboard</a></li>
+            @endif
+            @if(Gate::check('User'))
+            <li><a class="nav-link scrollto" href="/dashboard/event">Dashboard</a></li>
+            @endif
             <li><hr class="dropdown-divider"></li>
             <li>
               <form action="/logout" method="post">

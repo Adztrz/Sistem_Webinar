@@ -36,7 +36,8 @@ class DashboardController extends Controller
     {
         $regist = registration::all();
         $user = user::all();
-        return view('dashboard.pendaftar', compact('regist','user'));
+        $ngevent = event::all();
+        return view('dashboard.pendaftar', compact('regist','user','ngevent'));
     }
 
     public function update(Request $request, string $id)
